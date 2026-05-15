@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027年 GW ベルギー・オランダ・パリ美術巡り</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1d2e;
+    --ink-soft: #2d3148;
+    --paper: #f5f1e8;
+    --paper-warm: #ede5d3;
+    --gold: #a8854a;
+    --gold-deep: #7a6235;
+    --rust: #8b4a3a;
+    --sage: #5a6b54;
+    --grey-soft: #8a8478;
+    --line: #c8c0a8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Shippori Mincho', 'Cormorant Garamond', serif;
+    line-height: 1.8;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(168, 133, 74, 0.05), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(26, 29, 46, 0.04), transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 表紙 */
+  .cover {
+    text-align: center;
+    padding: 80px 0 100px;
+    border-bottom: 1px double var(--line);
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .cover::before {
+    content: "MUSEUM PILGRIMAGE";
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.6em;
+    color: var(--gold);
+    margin-bottom: 30px;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .cover h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+  }
+
+  .cover .ornament {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin: 20px 0;
+    letter-spacing: 0.3em;
+  }
+
+  .cover .meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--grey-soft);
+    letter-spacing: 0.15em;
+    margin-top: 30px;
+  }
+
+  .cover .meta div { margin: 4px 0; }
+
+  /* 目次 */
+  .toc {
+    background: var(--paper-warm);
+    padding: 40px 50px;
+    margin-bottom: 80px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .toc h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold-deep);
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  .toc ul {
+    list-style: none;
+    columns: 2;
+    column-gap: 50px;
+  }
+
+  .toc li { margin-bottom: 12px; break-inside: avoid; }
+
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: block;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted var(--line);
+  }
+
+  .toc a:hover { color: var(--gold); }
+
+  /* セクション */
+  section { margin-bottom: 80px; scroll-margin-top: 20px; }
+
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  h2.section-title .num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+  }
+
+  h3.subsection {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    border-left: 4px solid var(--gold);
+    padding-left: 16px;
+  }
+
+  h4.spot-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 36px;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  h4.spot-title .jp {
+    display: block;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    color: var(--gold-deep);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  p { margin-bottom: 16px; }
+  ul, ol { margin-left: 24px; margin-bottom: 16px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink-soft); font-weight: 700; }
+
+  /* 表 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+
+  th {
+    background: var(--paper-warm);
+    color: var(--ink-soft);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 2px solid var(--ink-soft);
+    font-weight: 600;
+    font-family: 'Shippori Mincho', serif;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  tr:hover td { background: rgba(168, 133, 74, 0.05); }
+
+  /* 画像レイアウト */
+  .artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin: 30px 0;
+  }
+
+  .artwork { text-align: center; }
+
+  .artwork-frame {
+    background: white;
+    padding: 14px 14px 0 14px;
+    box-shadow:
+      0 2px 6px rgba(26, 29, 46, 0.08),
+      0 8px 24px rgba(26, 29, 46, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 12px;
+  }
+
+  .artwork-frame:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 4px 12px rgba(26, 29, 46, 0.12),
+      0 16px 32px rgba(26, 29, 46, 0.18);
+  }
+
+  .artwork-frame img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #faf7ee;
+  }
+
+  .artwork-frame .caption-strip {
+    padding: 10px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--grey-soft);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    border-top: 1px solid var(--line);
+    margin-top: 12px;
+  }
+
+  .artwork .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+
+  .artwork .artist {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.75rem;
+    color: var(--grey-soft);
+  }
+
+  /* 大きな建築写真 */
+  .hero-image {
+    margin: 30px 0;
+    box-shadow: 0 4px 20px rgba(26, 29, 46, 0.15);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #2a2d3e;
+  }
+
+  .hero-image .caption {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* 引用ボックス */
+  .callout {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--rust);
+    padding: 20px 28px;
+    margin: 24px 0;
+    font-size: 0.95rem;
+  }
+
+  .callout.gold { border-color: var(--gold); }
+  .callout.sage { border-color: var(--sage); }
+
+  .callout strong {
+    color: var(--rust);
+    font-family: 'Shippori Mincho', serif;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  .callout.gold strong { color: var(--gold-deep); }
+  .callout.sage strong { color: var(--sage); }
+
+  /* 各日のタイムテーブル */
+  .day-card {
+    background: white;
+    padding: 32px 40px;
+    margin: 30px 0;
+    box-shadow: 0 2px 12px rgba(26, 29, 46, 0.08);
+    border-top: 4px solid var(--gold);
+  }
+
+  .day-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .day-card .day-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+  }
+
+  .timetable { margin-top: 16px; }
+
+  .timetable .row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .timetable .row:last-child { border-bottom: none; }
+
+  .timetable .time {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  .timetable .activity { font-size: 0.95rem; line-height: 1.6; }
+  .timetable .activity .highlight { color: var(--ink); font-weight: 600; }
+
+  /* 候補リスト */
+  .candidate {
+    background: white;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--line);
+    transition: border-color 0.2s;
+  }
+
+  .candidate:hover { border-left-color: var(--gold); }
+  .candidate.first { border-left-color: var(--gold); }
+  .candidate.second { border-left-color: var(--sage); }
+  .candidate.third { border-left-color: var(--rust); }
+
+  .candidate-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--grey-soft);
+    letter-spacing: 0.2em;
+    margin-bottom: 4px;
+  }
+
+  .candidate-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .candidate-details { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; }
+  .candidate-details div { margin-bottom: 3px; }
+
+  /* チェックリスト */
+  .checklist {
+    background: white;
+    padding: 24px 32px;
+    margin: 20px 0;
+    border: 1px solid var(--line);
+  }
+
+  .checklist li {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 1.2rem;
+    top: -3px;
+  }
+
+  a { color: var(--gold-deep); }
+  a:hover { color: var(--rust); }
+
+  /* 訪れる街々（Cities）セクション */
+  .city-card {
+    background: white;
+    margin: 30px 0;
+    box-shadow: 0 2px 12px rgba(26, 29, 46, 0.08);
+    overflow: hidden;
+    border-top: 4px solid var(--gold);
+  }
+
+  .city-card .city-image {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #2a2d3e;
+  }
+
+  .city-card .city-content {
+    padding: 28px 36px;
+  }
+
+  .city-card .city-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 6px;
+  }
+
+  .city-card .city-name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  .city-card .city-name-jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.15rem;
+    color: var(--gold-deep);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .city-card .city-description {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+
+  .city-card .city-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--grey-soft);
+    letter-spacing: 0.15em;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  .ornament-divider {
+    text-align: center;
+    margin: 60px 0;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    letter-spacing: 1em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 60px 0 40px;
+    margin-top: 80px;
+    border-top: 1px double var(--line);
+    color: var(--grey-soft);
+    font-size: 0.85rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    body::before { display: none; }
+    .toc { page-break-after: always; }
+    section { page-break-inside: avoid; }
+    .artwork-frame { box-shadow: none; border: 1px solid #ccc; }
+    .hero-image { box-shadow: none; }
+  }
+
+  @media (max-width: 768px) {
+    .container { padding: 30px 20px; }
+    .cover { padding: 40px 0 60px; }
+    .cover h1 { font-size: 2.3rem; }
+    .cover h2 { font-size: 1.3rem; }
+    h2.section-title { font-size: 1.8rem; }
+    h4.spot-title { font-size: 1.3rem; }
+    .toc { padding: 24px; }
+    .toc ul { columns: 1; }
+    .day-card { padding: 20px; }
+    .timetable .row { grid-template-columns: 80px 1fr; gap: 12px; }
+    .hero-image img { height: 250px; }
+    .artwork-frame img { height: 200px; }
+    .city-card .city-image { height: 220px; }
+    .city-card .city-content { padding: 20px; }
+    .city-card .city-name-en { font-size: 1.5rem; }
+  }
+
+  /* ライトボックス（クリックで拡大表示） */
+  .clickable {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+  }
+
+  .clickable:hover {
+    opacity: 0.92;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 17, 28, 0.96);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    cursor: zoom-out;
+    animation: fadeIn 0.25s ease;
+  }
+
+  .lightbox.active { display: flex; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.6);
+    cursor: default;
+  }
+
+  .lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--paper);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 24px;
+    border-radius: 2px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: var(--paper);
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    font-family: 'Cormorant Garamond', serif;
+    transition: color 0.2s;
+    user-select: none;
+  }
+
+  .lightbox-close:hover { color: var(--gold); }
+
+  .lightbox-hint {
+    position: absolute;
+    top: 30px;
+    left: 32px;
+    color: var(--grey-soft);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+
+  @media (max-width: 768px) {
+    .lightbox { padding: 20px; }
+    .lightbox-caption { font-size: 0.85rem; bottom: 20px; }
+    .lightbox-close { top: 16px; right: 20px; font-size: 2rem; }
+    .lightbox-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- 表紙 -->
+<header class="cover">
+  <h1>Belgium · Netherlands · Paris</h1>
+  <div class="ornament">⁂ ⁂ ⁂</div>
+  <h2>美術巡礼 八日間の旅</h2>
+  <div class="meta">
+    <div>2027 · APRIL 24 — MAY 02</div>
+    <div>GOLDEN WEEK · 8 DAYS</div>
+    <div>FOR TWO TRAVELLERS</div>
+  </div>
+</header>
+
+<!-- 目次 -->
+<nav class="toc">
+  <h3>Index — 目次</h3>
+  <ul>
+    <li><a href="#essentials">I. 基本情報・フライト</a></li>
+    <li><a href="#hotels">II. 宿泊</a></li>
+    <li><a href="#overview">III. 日程概要</a></li>
+    <li><a href="#cities">IV. 訪れる街々</a></li>
+    <li><a href="#guide">V. 観光スポット見どころガイド</a></li>
+    <li><a href="#daily">VI. 各日の詳細</a></li>
+    <li><a href="#museums">VII. 美術館予約タイムライン</a></li>
+    <li><a href="#trains">VIII. 列車手配</a></li>
+    <li><a href="#budget">IX. 予算サマリー</a></li>
+    <li><a href="#dining">X. 食事スポット</a></li>
+    <li><a href="#souvenirs">XI. お土産戦略</a></li>
+    <li><a href="#notes">XII. 重要な注意事項</a></li>
+    <li><a href="#checklist">XIII. 出発前チェックリスト</a></li>
+  </ul>
+</nav>
+
+<!-- I. 基本情報・フライト -->
+<section id="essentials">
+  <h2 class="section-title"><span class="num">I</span>基本情報・フライト</h2>
+  <table>
+    <tr><th>項目</th><th>詳細</th></tr>
+    <tr><td>旅程</td><td>2027年4月24日(土) 〜 5月2日(日)</td></tr>
+    <tr><td>旅行者</td><td>カップル2名（1部屋ツインベッド）</td></tr>
+    <tr><td>テーマ</td><td>美術館・歴史中心、フランドル絵画〜印象派〜現代まで</td></tr>
+    <tr><td>拠点</td><td>ブリュッセル4泊 + Zaandam（アムステルダム郊外）3泊</td></tr>
+  </table>
+  <h3 class="subsection">フライト</h3>
+  <p><strong>往路</strong>: ANA NH231 — 4/24(土) 成田 10:15発 → ブリュッセル 17:35着</p>
+  <p><strong>復路</strong>: ANA NH232 — 5/1(土) ブリュッセル 19:30発 → 成田 翌5/2(日) 16:10着</p>
+</section>
+
+<!-- II. ホテル -->
+<section id="hotels">
+  <h2 class="section-title"><span class="num">II</span>宿泊</h2>
+  <div class="candidate first">
+    <div class="candidate-label">BRUSSELS — 4 NIGHTS</div>
+    <div class="candidate-name">NH Brussels Carrefour de l'Europe</div>
+    <div class="candidate-details">
+      <div>Rue du Marché aux Herbes 110, 1000 Bruxelles</div>
+      <div>期間: 4/24〜4/27（4泊）／ 価格: €663.52</div>
+      <div>Minor Hotels直接予約、キャンセル無料</div>
+      <div>ブリュッセル中央駅徒歩5分、グランプラス徒歩1分</div>
+      <div>※ ツインベッド・冷蔵庫の有無を確認</div>
+    </div>
+  </div>
+  <div class="candidate first">
+    <div class="candidate-label">ZAANDAM — 3 NIGHTS</div>
+    <div class="candidate-name">Inntel Hotels Amsterdam Zaandam</div>
+    <div class="candidate-details">
+      <div>Provincialeweg 102, 1506 MD Zaandam</div>
+      <div>期間: 4/28〜4/30（3泊）／ 価格: €376.83</div>
+      <div>Agoda予約、キャンセル無料</div>
+      <div>Zaandam駅徒歩2分、アムス中央駅まで直通12分</div>
+      <div>※ "Twin room with two separate beds" を明示</div>
+      <div>※ "Not facing the train tracks" をリクエスト</div>
+    </div>
+  </div>
+</section>
+
+<!-- III. 日程概要 -->
+<section id="overview">
+  <h2 class="section-title"><span class="num">III</span>日程概要</h2>
+  <table>
+    <tr><th>日付</th><th>曜日</th><th>拠点</th><th>主要内容</th></tr>
+    <tr><td>4/24</td><td>土</td><td>ブリュッセル</td><td>17:35着、グランプラスで夕食</td></tr>
+    <tr><td>4/25</td><td>日</td><td>ブリュッセル</td><td>王立美術館・マグリット + 午後王宮温室</td></tr>
+    <tr><td>4/26</td><td>月</td><td>ブリュッセル</td><td>パリ日帰り（ルーブル4〜5時間）</td></tr>
+    <tr><td>4/27</td><td>火</td><td>ブリュッセル</td><td>アントワープ日帰り（ルーベンスの家含む）</td></tr>
+    <tr><td>4/28</td><td>水</td><td>Zaandam</td><td>ゲント観光→Zaandam移動</td></tr>
+    <tr><td>4/29</td><td>木</td><td>Zaandam</td><td>ゴッホ美術館・国立美術館</td></tr>
+    <tr><td>4/30</td><td>金</td><td>Zaandam</td><td>ハーグ・デルフト日帰り</td></tr>
+    <tr><td>5/1</td><td>土</td><td>機中泊</td><td>ザーンセ・スカンス朝散策→帰国</td></tr>
+  </table>
+</section>
+
+<div class="ornament-divider">❦</div>
+
+<!-- IV. 訪れる街々 -->
+<section id="cities">
+  <h2 class="section-title"><span class="num">IV</span>訪れる街々</h2>
+  <p style="margin-bottom: 30px; color: var(--ink-soft);">8日間で7つの街を訪れます。それぞれが異なる時代の刻印を残し、独自の美術と歴史を育んできました。これから出会う街々の顔を、まずはひと目で。</p>
+
+  <!-- ブリュッセル -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Brusel_Grand-Place_domy_1.jpg?width=1920" data-caption="Brussels" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brusel_Grand-Place_domy_1.jpg?width=1280" alt="Brussels">
+    <div class="city-content">
+      <div class="city-label">CITY 01 · BELGIUM</div>
+      <div class="city-name-en">Brussels</div>
+      <div class="city-name-jp">ブリュッセル</div>
+      <div class="city-description">ベルギーの首都にしてEUの実質的な「首都」。中世のグランプラスを中心とした旧市街と、現代政治の心臓部が共存する不思議な街。フランス語とオランダ語の二言語都市で、街角の表示にもその性格が現れる。ブリューゲル、マグリット、そしてアール・ヌーヴォーのヴィクトル・オルタを生んだ芸術の地でもあり、今回の旅の起点・終点となる4泊の拠点。</div>
+      <div class="city-meta">4 NIGHTS · APRIL 24-27 · HUB</div>
+    </div>
+  </div>
+
+  <!-- アントワープ -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Brabo_Fountain_and_Grote_Markt,_main_square_of_Antwerp.JPG?width=1920" data-caption="Antwerp" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brabo_Fountain_and_Grote_Markt,_main_square_of_Antwerp.JPG?width=1280" alt="Antwerp">
+    <div class="city-content">
+      <div class="city-label">CITY 02 · BELGIUM</div>
+      <div class="city-name-en">Antwerp</div>
+      <div class="city-name-jp">アントワープ（アントウェルペン）</div>
+      <div class="city-description">ベルギー第二の都市にして、世界のダイヤモンド取引の中心地。スヘルデ川沿いに発展した港町で、16世紀には欧州随一の商業都市として黄金期を迎えた。バロックの巨匠<strong>ルーベンス</strong>の故郷であり、彼が設計した邸宅・聖母大聖堂の三連祭壇画など、画家ゆかりの遺産が街中に息づく。「フランダースの犬」の舞台としても日本人には馴染み深い。</div>
+      <div class="city-meta">DAY TRIP · APRIL 27 · TUESDAY</div>
+    </div>
+  </div>
+
+  <!-- パリ -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Notre-Dame_de_Paris-France.JPG?width=1920" data-caption="Paris" src="https://commons.wikimedia.org/wiki/Special:FilePath/Notre-Dame_de_Paris-France.JPG?width=1280" alt="Paris">
+    <div class="city-content">
+      <div class="city-label">CITY 03 · FRANCE</div>
+      <div class="city-name-en">Paris</div>
+      <div class="city-name-jp">パリ</div>
+      <div class="city-description">言わずと知れたフランスの首都にして、欧州美術の不動の聖地。セーヌ川とともに育まれた2,000年の都市史は、ローマ時代のルテティアから現代まで連綿と続く。今回の主目的は<strong>ルーブル美術館</strong>——元王宮の壮大な空間に、古代エジプトからフェルメールまで人類の至宝38,000点が並ぶ世界最大の美術館で、一日かけて巨匠たちと対峙する。</div>
+      <div class="city-meta">DAY TRIP · APRIL 26 · MONDAY (via Eurostar)</div>
+    </div>
+  </div>
+
+  <!-- ゲント -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Gent_Graslei_zonsondergang.JPG?width=1920" data-caption="Ghent" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gent_Graslei_zonsondergang.JPG?width=1280" alt="Ghent">
+    <div class="city-content">
+      <div class="city-label">CITY 04 · BELGIUM</div>
+      <div class="city-name-en">Ghent</div>
+      <div class="city-name-jp">ゲント（ヘント）</div>
+      <div class="city-description">中世フランドルの繁栄を今に伝える「水の都」。13〜14世紀には欧州第二の人口を誇り、毛織物産業で巨万の富を築いた。レイエ川沿いに並ぶ<strong>Graslei（穀物河岸）</strong>のギルドハウス群は、その黄金期の証人。聖バーフ大聖堂に納められた<strong>ファン・エイク兄弟「神秘の子羊」</strong>は北方ルネサンス絵画の出発点として、世界中の美術愛好家を惹きつけてやまない。</div>
+      <div class="city-meta">DAY TRIP · APRIL 28 · WEDNESDAY</div>
+    </div>
+  </div>
+
+  <!-- アムステルダム -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug_Amsterdam.JPG?width=1920" data-caption="Amsterdam" src="https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug_Amsterdam.JPG?width=1280" alt="Amsterdam">
+    <div class="city-content">
+      <div class="city-label">CITY 05 · NETHERLANDS</div>
+      <div class="city-name-en">Amsterdam</div>
+      <div class="city-name-jp">アムステルダム</div>
+      <div class="city-description">17世紀の黄金時代に「世界の倉庫」と呼ばれた商都。同心円状に広がる運河網はユネスコ世界遺産で、当時の商人たちが築いた切妻屋根の住宅が今も街並みを形作る。<strong>レンブラント</strong>、<strong>フェルメール</strong>、そして3世紀後の<strong>ゴッホ</strong>——オランダが生んだ三大巨匠の傑作が、この街に集結している。Rijksmuseumとゴッホ美術館を1日で巡る、美術巡礼のハイライト。</div>
+      <div class="city-meta">VISIT · APRIL 29 · THURSDAY (拠点はZaandam 3泊)</div>
+    </div>
+  </div>
+
+  <!-- デン・ハーグ -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Binnenhof,_Den_Haag.JPG?width=1920" data-caption="The Hague" src="https://commons.wikimedia.org/wiki/Special:FilePath/Binnenhof,_Den_Haag.JPG?width=1280" alt="The Hague">
+    <div class="city-content">
+      <div class="city-label">CITY 06 · NETHERLANDS</div>
+      <div class="city-name-en">The Hague</div>
+      <div class="city-name-jp">デン・ハーグ</div>
+      <div class="city-description">オランダの政治の中心地。アムステルダムが「首都」でも、国王の居所・政府機関・国会議事堂（Binnenhof）はすべてこの街にある。13世紀のホラント伯の城を起源とする落ち着いた都市で、国際司法裁判所も置かれる「国際法の都」。湖畔に佇む<strong>マウリッツハイス美術館</strong>には、フェルメールの「真珠の耳飾りの少女」「デルフトの眺望」が静かに息づく。</div>
+      <div class="city-meta">DAY TRIP · APRIL 30 · FRIDAY</div>
+    </div>
+  </div>
+
+  <!-- デルフト -->
+  <div class="city-card">
+    <img class="city-image clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/De_Nieuwe_Kerk_en_omgeving_vanaf_de_Markt_(2021).jpg?width=1920" data-caption="Delft" src="https://commons.wikimedia.org/wiki/Special:FilePath/De_Nieuwe_Kerk_en_omgeving_vanaf_de_Markt_(2021).jpg?width=1280" alt="Delft">
+    <div class="city-content">
+      <div class="city-label">CITY 07 · NETHERLANDS</div>
+      <div class="city-name-en">Delft</div>
+      <div class="city-name-jp">デルフト</div>
+      <div class="city-description"><strong>フェルメール</strong>（1632-1675）が生まれ、生涯のほとんどを過ごし、ここで埋葬された街。彼の傑作「デルフトの眺望」に描かれた構図は、今も街角に残る運河沿いの風景にそのまま見出すことができる。新教会（Nieuwe Kerk）にはオランダ建国の父オラニエ公ウィレム1世の墓所が、そして街中の工房では世界的に有名な<strong>デルフト・ブルー</strong>の陶器が今も焼かれ続ける、時間が止まったような古都。</div>
+      <div class="city-meta">DAY TRIP · APRIL 30 · FRIDAY (ハーグから足を延ばす)</div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament-divider">❦</div>
+
+<!-- V. 観光スポット見どころガイド -->
+<section id="guide">
+  <h2 class="section-title"><span class="num">V</span>観光スポット見どころガイド</h2>
+
+  <h3 class="subsection">🇧🇪 ブリュッセル</h3>
+
+  <h4 class="spot-title">Grand Place<span class="jp">グランプラス</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Brusel_Grand-Place_domy_1.jpg?width=1920" data-caption="Grand Place Brussels" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brusel_Grand-Place_domy_1.jpg?width=1280" alt="Grand Place Brussels">
+    <div class="caption">Grand Place de Bruxelles — ユネスコ世界遺産、ブリュッセル中心の中世広場</div>
+  </div>
+  <p>ヴィクトル・ユーゴーが「世界で最も美しい広場」と称した中世広場。15-17世紀のギルドハウス（同業組合館）に囲まれ、夕方のライトアップが特に美しい。市庁舎の塔（96m）は塔上の天使ミカエル像で有名。<strong>到着日の夕食散歩で必訪</strong>。</p>
+
+  <h4 class="spot-title">Musées Royaux des Beaux-Arts<span class="jp">ベルギー王立美術館</span></h4>
+  <p>ベルギー最大の美術館コンプレックス。古典派、新古典派、ロマン派、印象派まで欧州美術史を網羅。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_The_Numbering_at_Bethlehem_-_Google_Art_Project.jpg?width=1920" data-caption="ベツレヘムの戸籍調査" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_The_Numbering_at_Bethlehem_-_Google_Art_Project.jpg?width=500" alt="ベツレヘムの戸籍調査">
+        <div class="caption-strip">1566 · OIL ON PANEL</div>
+      </div>
+      <div class="title">The Census at Bethlehem</div>
+      <div class="artist">Pieter Bruegel the Elder</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg?width=1920" data-caption="イカロスの墜落" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg?width=500" alt="イカロスの墜落">
+        <div class="caption-strip">c.1560 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Landscape with the Fall of Icarus</div>
+      <div class="artist">After Pieter Bruegel the Elder</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David,_La_Mort_de_Marat_(ou_Marat_assassiné),_1793,_Bruxelles,_Musées_royaux_des_Beaux‑Arts_de_Belgique,_inv._3260.jpg?width=1920" data-caption="マラーの死" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David,_La_Mort_de_Marat_(ou_Marat_assassiné),_1793,_Bruxelles,_Musées_royaux_des_Beaux‑Arts_de_Belgique,_inv._3260.jpg?width=500" alt="マラーの死">
+        <div class="caption-strip">1793 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Death of Marat</div>
+      <div class="artist">Jacques-Louis David</div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>ブリューゲル（父）「ベツレヘムの戸籍調査」「イカロスの墜落のある風景」</strong>: 16世紀フランドル農民画の頂点</li>
+    <li><strong>ルーベンス「東方三博士の礼拝」「カルワリオの丘への上り」</strong>: バロック巨匠の地元コレクション</li>
+    <li><strong>ヒエロニムス・ボッシュ「キリストの磔刑」</strong>: 幻想絵画の先駆者</li>
+    <li><strong>ダヴィッド「マラーの死」</strong>: フランス革命を象徴する新古典主義の代表作</li>
+  </ul>
+
+  <h4 class="spot-title">Musée Magritte<span class="jp">マグリット美術館</span></h4>
+  <p>王立美術館に隣接。シュルレアリスムの巨匠<strong>ルネ・マグリット</strong>（1898-1967）の世界最大コレクション、約230点。「光の帝国」シリーズ、「人の子」（顔をリンゴで覆う男）、「これはパイプではない」関連作品など。</p>
+  <div class="callout">
+    <strong>鑑賞のコツ</strong>
+    マグリットは「常識を裏切ることで本質を見せる」画家。タイトルと絵の食い違いを楽しむ。
+  </div>
+
+  <h4 class="spot-title">Serres royales de Laeken<span class="jp">王宮温室</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Les_serres_royales_de_Laeken_en_nocturne.jpg?width=1920" data-caption="王宮温室" src="https://commons.wikimedia.org/wiki/Special:FilePath/Les_serres_royales_de_Laeken_en_nocturne.jpg?width=1280" alt="王宮温室">
+    <div class="caption">Serres royales de Laeken — 年3週間限定公開の「ガラスと鉄の宮殿」</div>
+  </div>
+  <p><strong>年間3週間限定公開の希少スポット</strong>。1865-1895年にレオポルド2世とアルフォンス・バラ（建築家）が築いた「ガラスと鉄の宮殿」。全長約2.5km、ガラスの面積15,000㎡。アール・ヌーヴォーの先駆け、ヴィクトル・オルタの先生筋。</p>
+  <ul>
+    <li>王室のプライベートガーデンが春の3週間だけ公開</li>
+    <li>カメリア（椿）、シダ、ラン、ヤシ、地中海植物の温室群</li>
+    <li>「冬の庭園」（最大温室）は現在改修中で見学不可</li>
+    <li>写真撮影自由、ガラス越しの春の光が幻想的</li>
+  </ul>
+
+  <h3 class="subsection">🇫🇷 パリ</h3>
+
+  <h4 class="spot-title">Musée du Louvre<span class="jp">ルーブル美術館</span></h4>
+  <p>世界最大の美術館、約38,000点を展示。元はフランス王宮（12世紀築）。3つの翼（ドゥノン・シュリー・リシュリュー）。<strong>4-5時間で主要作品集中鑑賞プラン</strong>。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg?width=1920" data-caption="モナ・リザ" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg?width=500" alt="モナ・リザ">
+        <div class="caption-strip">1503-19 · OIL ON POPLAR</div>
+      </div>
+      <div class="title">Mona Lisa</div>
+      <div class="artist">Leonardo da Vinci</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Nike_of_Samothrake_Louvre_Ma2369_n4.jpg?width=1920" data-caption="サモトラケのニケ" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nike_of_Samothrake_Louvre_Ma2369_n4.jpg?width=500" alt="サモトラケのニケ">
+        <div class="caption-strip">c.190 BC · MARBLE</div>
+      </div>
+      <div class="title">Winged Victory of Samothrace</div>
+      <div class="artist">Hellenistic Greece</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/0_Vénus_de_Milo_-_Ma_399_-_Louvre_1.JPG?width=1920" data-caption="ミロのヴィーナス" src="https://commons.wikimedia.org/wiki/Special:FilePath/0_Vénus_de_Milo_-_Ma_399_-_Louvre_1.JPG?width=500" alt="ミロのヴィーナス">
+        <div class="caption-strip">c.130 BC · MARBLE</div>
+      </div>
+      <div class="title">Venus de Milo</div>
+      <div class="artist">Hellenistic Greece</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Eugène_Delacroix_-_La_liberté_guidant_le_peuple.jpg?width=1920" data-caption="民衆を導く自由の女神" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eugène_Delacroix_-_La_liberté_guidant_le_peuple.jpg?width=500" alt="民衆を導く自由の女神">
+        <div class="caption-strip">1830 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Liberty Leading the People</div>
+      <div class="artist">Eugène Delacroix</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David,_The_Coronation_of_Napoleon_edit.jpg?width=1920" data-caption="ナポレオンの戴冠式" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David,_The_Coronation_of_Napoleon_edit.jpg?width=500" alt="ナポレオンの戴冠式">
+        <div class="caption-strip">1805-07 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Coronation of Napoleon</div>
+      <div class="artist">Jacques-Louis David</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_The_lacemaker_(c.1669-1671).jpg?width=1920" data-caption="レースを編む女" src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_The_lacemaker_(c.1669-1671).jpg?width=500" alt="レースを編む女">
+        <div class="caption-strip">c.1670 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Lacemaker</div>
+      <div class="artist">Johannes Vermeer</div>
+    </div>
+  </div>
+  <div class="callout gold">
+    <strong>鑑賞のコツ</strong>
+    朝9:30入場で「モナ・リザ」「ニケ」を最初に。混雑する人気作品から先回り。月曜は最も空いている曜日の一つ。
+  </div>
+
+  <h3 class="subsection">🇧🇪 アントワープ</h3>
+
+  <h4 class="spot-title">Onze-Lieve-Vrouwekathedraal<span class="jp">聖母大聖堂</span></h4>
+  <p>ベルギー最大のゴシック大聖堂（123m）、1352年着工で1521年完成。<strong>ルーベンス3大祭壇画</strong>所蔵。「フランダースの犬」のラストシーンの舞台。ネロがパトラッシュと最期に「キリストの降架」を見て亡くなる。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_The_Raising_of_the_Cross_(Antwerp_Cathedral).jpg?width=1920" data-caption="キリストの昇架" src="https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_The_Raising_of_the_Cross_(Antwerp_Cathedral).jpg?width=500" alt="キリストの昇架">
+        <div class="caption-strip">1610-11 · TRIPTYCH</div>
+      </div>
+      <div class="title">The Elevation of the Cross</div>
+      <div class="artist">Peter Paul Rubens</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg?width=1920" data-caption="キリストの降架" src="https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_Descent_from_the_Cross_-_WGA20212.jpg?width=500" alt="キリストの降架">
+        <div class="caption-strip">1611-14 · TRIPTYCH</div>
+      </div>
+      <div class="title">Descent from the Cross</div>
+      <div class="artist">Peter Paul Rubens</div>
+    </div>
+  </div>
+
+  <h4 class="spot-title">Rubenshuis<span class="jp">ルーベンスの家</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Rubenshaus.JPG?width=1920" data-caption="Rubenshuis" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rubenshaus.JPG?width=1280" alt="Rubenshuis">
+    <div class="caption">Rubenshuis — ピーテル・パウル・ルーベンスの住居兼アトリエ</div>
+  </div>
+  <p>17世紀バロックの巨匠<strong>ピーテル・パウル・ルーベンス</strong>（1577-1640）の住居兼アトリエ。1610-1640年に居住、自ら設計したイタリア風ルネサンス邸宅。ルーベンス自画像、コレクションした古代彫刻と絵画、アトリエ（工房）の様子、彼が育てた弟子（ファン・ダイク、ヨルダーンス）の作品。</p>
+  <div class="callout">
+    <strong>注意</strong>
+    火曜開館、水曜休館。今回の旅程では4/27(火)に組み込み。
+  </div>
+
+  <h4 class="spot-title">KMSKA<span class="jp">アントワープ王立美術館</span></h4>
+  <p>2022年大改修後リオープン。約8,400点。ファン・エイク、ロヒール・ファン・デル・ウェイデン、メムリンク、ルーベンス、ヨルダーンス、ファン・ダイクなどフランドル巨匠。<strong>ジェームズ・アンソール「キリストのブリュッセル入城」</strong>（19世紀末ベルギー象徴主義の頂点）。モダンな展示空間、自然光を活かした建築も見どころ。</p>
+
+  <h3 class="subsection">🇧🇪 ゲント</h3>
+
+  <h4 class="spot-title">Sint-Baafskathedraal<span class="jp">聖バーフ大聖堂</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Sint-Baafskathedraal_(St._Bavo's_Cathedral)_Ghent_Belgium_October.jpg?width=1920" data-caption="Sint-Baafskathedraal" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sint-Baafskathedraal_(St._Bavo's_Cathedral)_Ghent_Belgium_October.jpg?width=1280" alt="Sint-Baafskathedraal">
+    <div class="caption">Sint-Baafskathedraal — ゲント中心部の14-16世紀ゴシック大聖堂</div>
+  </div>
+  <p>ゲント中心部のゴシック大聖堂、現在の建物は14-16世紀。<strong>ファン・エイク兄弟「神秘の子羊（ゲント祭壇画）」（1432）</strong>を所蔵。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Lamgods_open.jpg?width=1920" data-caption="神秘の子羊" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lamgods_open.jpg?width=960" alt="神秘の子羊">
+        <div class="caption-strip">1432 · POLYPTYCH ALTARPIECE</div>
+      </div>
+      <div class="title">The Adoration of the Mystic Lamb</div>
+      <div class="artist">Jan & Hubert van Eyck</div>
+    </div>
+  </div>
+  <ul>
+    <li>北方ルネサンス絵画の原点、油彩技法の革命的傑作</li>
+    <li>12枚のパネル、開閉式の祭壇画</li>
+    <li>中央パネル「神秘の子羊」は楽園で子羊（キリストの象徴）に天使と聖人が礼拝</li>
+    <li><strong>AR体験ツアー</strong>で各パネルの細部・歴史を解説（評価高）</li>
+    <li>史上最も盗難・略奪された絵画（ナポレオン、ナチス、戦時略奪等7回）</li>
+    <li><strong>2024年に修復完了</strong>、復元された当初の鮮やかな色彩</li>
+  </ul>
+
+  <h3 class="subsection">🇳🇱 アムステルダム</h3>
+
+  <h4 class="spot-title">Rijksmuseum<span class="jp">国立美術館</span></h4>
+  <p>オランダ最大の美術館、約8,000点を展示、1885年開館。レンブラント「夜警」とフェルメール4作品が同時に観られる世界唯一の場所。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=1920" data-caption="夜警" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Night_Watch_-_HD.jpg?width=500" alt="夜警">
+        <div class="caption-strip">1642 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Night Watch</div>
+      <div class="artist">Rembrandt van Rijn</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg?width=1920" data-caption="牛乳を注ぐ女" src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg?width=500" alt="牛乳を注ぐ女">
+        <div class="caption-strip">c.1658 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Milkmaid</div>
+      <div class="artist">Johannes Vermeer</div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>レンブラント「夜警」（1642）</strong>: 6m近い巨大集団肖像画、レンブラント最大傑作。大規模修復プロジェクト中、ガラスケース越しに鑑賞</li>
+    <li><strong>フェルメール「牛乳を注ぐ女」「デルフトの小路」「手紙を読む青衣の女」「恋文」</strong>: 現存35〜37作中4作所蔵</li>
+    <li><strong>フランス・ハルス「陽気な酒飲み」</strong>、<strong>ヤン・ステーン</strong>、<strong>ライスダール</strong>などオランダ黄金期の名作</li>
+  </ul>
+
+  <h4 class="spot-title">Van Gogh Museum<span class="jp">ゴッホ美術館</span></h4>
+  <p>世界最大のゴッホコレクション、約200点の油彩・500点の素描、家族コレクション中心。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg?width=1920" data-caption="ひまわり" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_Willem_van_Gogh_127.jpg?width=500" alt="ひまわり">
+        <div class="caption-strip">1888 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Sunflowers</div>
+      <div class="artist">Vincent van Gogh</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg?width=1920" data-caption="アーモンドの花" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg?width=500" alt="アーモンドの花">
+        <div class="caption-strip">1890 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Almond Blossom</div>
+      <div class="artist">Vincent van Gogh</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_The_yellow_house_('The_street').jpg?width=1920" data-caption="黄色い家" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_The_yellow_house_('The_street').jpg?width=500" alt="黄色い家">
+        <div class="caption-strip">1888 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Yellow House</div>
+      <div class="artist">Vincent van Gogh</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg?width=1920" data-caption="寝室" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg?width=500" alt="寝室">
+        <div class="caption-strip">1888 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">The Bedroom</div>
+      <div class="artist">Vincent van Gogh</div>
+    </div>
+  </div>
+  <div class="callout sage">
+    <strong>鑑賞のコツ</strong>
+    時系列展示で<strong>画風の急激な進化</strong>（オランダ暗黒期→パリ印象派吸収→アルル黄色期→サン・レミ精神病院期→オーベル晩年）を追体験。弟テオへの手紙の展示も感動的。
+  </div>
+
+  <h4 class="spot-title">Anne Frank Huis & Westerkerk<span class="jp">アンネ・フランクの家＆西教会</span></h4>
+  <p>Prinsengracht沿いに隣接する、性格の異なる二つの歴史的場所。<strong>運河ベルト散策の途中で、足を止めて静かに佇む場所</strong>として。</p>
+  <ul>
+    <li><strong>Anne Frank Huis（アンネ・フランクの家）</strong>: Prinsengracht 263-267。1942年7月から1944年8月まで、アンネ・フランク一家がナチスの迫害から逃れて2年1ヶ月の隠れ家生活を送った建物。世界中で読まれた『アンネの日記』の舞台。父オットー・フランクの会社の社屋の隠し扉の奥に、家族8人で身を潜めた</li>
+    <li><strong>Westerkerk（西教会）</strong>: 1631年完成のオランダ・ルネサンス様式の教会。塔は85m、アムステルダム最高峰の教会塔。<strong>レンブラントの墓</strong>がここにある（具体的な墓石は不明）。アンネ・フランクが日記で「<em>教会の鐘の音が私に勇気を与える</em>」と書いた、あの鐘の音の出所</li>
+    <li><strong>アンネ銅像</strong>: 教会前のWestermarkt広場に、1977年に建立された等身大のアンネ像</li>
+  </ul>
+  <div class="callout">
+    <strong>外観のみの訪問について</strong>
+    アンネ・フランクの家の内部見学は完全予約制で、6週間前から販売開始するチケットは数時間で完売します。今回は<strong>外観を訪れて静かに佇む</strong>形で、十分に敬意を表する訪れ方になります。むしろ建物の前に立ち、隠れ家生活を想像し、隣のWesterkerkの鐘の音（毎15分・毎時に鳴る）を聴くことが、本質的な体験かもしれません。
+  </div>
+  <div class="callout gold">
+    <strong>訪問のマナー</strong>
+    入場待ちの列ができていることが多いので、列を避けて静かに通り過ぎる、または運河の対岸（東側）から建物を眺めるのが良いでしょう。写真撮影は控えめに、現地で目にした記憶を大切に。
+  </div>
+
+  <h4 class="spot-title">Canal Belt & Magere Brug<span class="jp">運河ベルト＆跳ね橋</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug_Amsterdam.JPG?width=1920" data-caption="Magere Brug" src="https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug_Amsterdam.JPG?width=1280" alt="Magere Brug">
+    <div class="caption">Magere Brug — アムステル川にかかる17世紀の白い木造跳ね橋</div>
+  </div>
+  <p>ゴッホ美術館後の夕方、美術館の余韻に浸りながら<strong>17世紀の運河文化</strong>を体感する小さな散策。Leidsestraatから北上すると、ユネスコ世界遺産の<strong>運河ベルト</strong>（Grachtengordel）を構成する三本の運河——Prinsengracht・Keizersgracht・Herengracht——を順に渡ります。両岸に並ぶ切妻屋根の商人邸宅は、黄金時代の繁栄の証人。</p>
+  <ul>
+    <li><strong>Magere Brug（マヘレ・ブルグ／跳ね橋）</strong>: アムステル川にかかる白い木造跳ね橋。1670年頃の初代橋を伝統工法で復元、現在も実際に開閉する</li>
+    <li><strong>3本の運河</strong>: Prinsengracht（皇子の運河）→ Keizersgracht（皇帝の運河）→ Herengracht（紳士の運河）。同心円状に広がるのが特徴</li>
+    <li>「ゴールデンベンド」（Herengracht の Leidsestraat〜Vijzelstraat 間）には17世紀の豪商邸宅が並ぶ</li>
+    <li>4月下旬の日没は19:30頃、17時台は夕方の柔らかい斜光で運河が最も美しい時間帯</li>
+    <li>水路には観光船が行き交い、両岸のカフェのテラスは地元民で賑わう</li>
+  </ul>
+  <div class="callout">
+    <strong>所要時間</strong>
+    約1時間（Leidseplein → 運河ベルト → Magere Brug → Waterlooplein）。徒歩中心、距離は約2km。歩きやすい靴で。
+  </div>
+  <div class="callout gold">
+    <strong>ゴッホの跳ね橋とは別物</strong>
+    ゴッホが1888年にアルル（南フランス）で描いた「ラングロワ橋」（黄色い跳ね橋、洗濯する女たち）とこのMagere Brugは別の橋です。ゴッホの跳ね橋シリーズはアムステルダムのゴッホ美術館には所蔵されておらず、代表作はクレラー・ミュラー美術館（オッテルロー）にあります。Magere Brugは17世紀の運河文化を象徴するアムステルダム独自の名所として楽しみましょう。
+  </div>
+
+  <h3 class="subsection">🇳🇱 ハーグ・デルフト</h3>
+
+  <h4 class="spot-title">Mauritshuis<span class="jp">マウリッツハイス美術館</span></h4>
+  <p>17世紀の宮殿を改装した小規模ながら世界最高峰の絵画館、約800点。建物自体が17世紀ナッサウ家の邸宅、貴族の屋敷で絵画を見る贅沢な体験。</p>
+  <div class="artwork-grid">
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje_met_de_parel.jpg?width=1920" data-caption="真珠の耳飾りの少女" src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje_met_de_parel.jpg?width=500" alt="真珠の耳飾りの少女">
+        <div class="caption-strip">c.1665 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Girl with a Pearl Earring</div>
+      <div class="artist">Johannes Vermeer</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Vermeer-view-of-delft.jpg?width=1920" data-caption="デルフトの眺望" src="https://commons.wikimedia.org/wiki/Special:FilePath/Vermeer-view-of-delft.jpg?width=500" alt="デルフトの眺望">
+        <div class="caption-strip">1660-61 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">View of Delft</div>
+      <div class="artist">Johannes Vermeer</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg?width=1920" data-caption="テュルプ博士の解剖学講義" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg?width=500" alt="テュルプ博士の解剖学講義">
+        <div class="caption-strip">1632 · OIL ON CANVAS</div>
+      </div>
+      <div class="title">Anatomy Lesson of Dr Tulp</div>
+      <div class="artist">Rembrandt van Rijn</div>
+    </div>
+    <div class="artwork">
+      <div class="artwork-frame">
+        <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/Carel_Fabritius_-_The_Goldfinch_-_WGA7721.jpg?width=1920" data-caption="ごしきひわ" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carel_Fabritius_-_The_Goldfinch_-_WGA7721.jpg?width=500" alt="ごしきひわ">
+        <div class="caption-strip">1654 · OIL ON PANEL</div>
+      </div>
+      <div class="title">The Goldfinch</div>
+      <div class="artist">Carel Fabritius</div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>フェルメール「真珠の耳飾りの少女」（1665）</strong>: 「北のモナ・リザ」、口を開けかけたわずかな表情、青と黄の鮮烈な配色</li>
+    <li><strong>フェルメール「デルフトの眺望」（1660-61）</strong>: フェルメール唯一の本格風景画、プルーストが「世界一美しい絵」と絶賛</li>
+    <li><strong>レンブラント「テュルプ博士の解剖学講義」（1632）</strong>: 26歳の若きレンブラントの出世作</li>
+    <li><strong>ファブリティウス「ごしきひわ」（1654）</strong>: 映画「ゴールドフィンチ」で有名に</li>
+  </ul>
+
+  <h4 class="spot-title">Delft Old Town<span class="jp">デルフト旧市街</span></h4>
+  <p><strong>フェルメール（1632-1675）の生誕地</strong>、絵画「デルフトの眺望」の世界そのもの。</p>
+  <ul>
+    <li><strong>新教会（Nieuwe Kerk）</strong>: 1496年完成、塔は109m、登れば市内一望。オランダ王家の墓所、オラニエ公ウィレム1世（建国の父）の墓</li>
+    <li><strong>市場広場（Markt）</strong>: 新教会前の中央広場、市庁舎、デルフト陶器ショップ多数</li>
+    <li><strong>フェルメールセンター</strong>: フェルメール全作品の複製、生涯・技法解説。本物はないが、デルフトでのフェルメール理解には◯</li>
+    <li><strong>旧教会（Oude Kerk）</strong>: フェルメールが埋葬された教会</li>
+    <li>街並み自体が17世紀の景観を残し、「デルフトの眺望」の構図を実体験できる</li>
+  </ul>
+
+  <h3 class="subsection">🇳🇱 ザーンセ・スカンス</h3>
+
+  <h4 class="spot-title">Zaanse Schans<span class="jp">ザーンセ・スカンス</span></h4>
+  <div class="hero-image">
+    <img class="clickable" data-fullsrc="https://commons.wikimedia.org/wiki/Special:FilePath/3_windmills.JPG?width=1920" data-caption="Zaanse Schans" src="https://commons.wikimedia.org/wiki/Special:FilePath/3_windmills.JPG?width=1280" alt="Zaanse Schans">
+    <div class="caption">Zaanse Schans — 17-18世紀の風車村を再現した生きた野外博物館</div>
+  </div>
+  <p>オランダの伝統的な風景を保存した「<strong>生きた野外博物館</strong>」。17-18世紀のザーン地方の風車村を再現。</p>
+  <ul>
+    <li><strong>並び立つ風車群</strong>: 製粉、油搾り、染料、製材など産業用風車5基（De Kat、De Zoeker、Het Jonge Schaapなど）</li>
+    <li><strong>De Catharina Hoeve（チーズ農家）</strong>: 伝統ゴーダ製法実演、無料試食</li>
+    <li><strong>Klompenmakerij（木靴工房）</strong>: 木靴製造実演（毎時）、購入可</li>
+    <li>入場無料(個別アトラクションのみ有料)</li>
+    <li>朝早めが混雑回避＆光が美しい</li>
+    <li><strong>5/1朝の散策で</strong>お土産購入と風車写真撮影が一度に完了</li>
+  </ul>
+</section>
+
+<div class="ornament-divider">❦</div>
+
+<!-- V. 各日の詳細 -->
+<section id="daily">
+  <h2 class="section-title"><span class="num">VI</span>各日の詳細</h2>
+
+  <div class="day-card">
+    <div class="day-date">DAY 1 · APRIL 24 · SATURDAY</div>
+    <h3>ブリュッセル入り</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">10:15</div><div class="activity">成田発 NH231</div></div>
+      <div class="row"><div class="time">17:35</div><div class="activity">ブリュッセル空港着</div></div>
+      <div class="row"><div class="time">18:30</div><div class="activity">列車またはタクシーで中央駅、NHホテルチェックイン</div></div>
+      <div class="row"><div class="time">19:30〜</div><div class="activity"><span class="highlight">グランプラスで夕食、ライトアップ鑑賞</span></div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 2 · APRIL 25 · SUNDAY</div>
+    <h3>ブリュッセル美術デー</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">10:00–13:00</div><div class="activity"><span class="highlight">ベルギー王立美術館</span>（ブリューゲル、ルーベンス、ボッシュ、ダヴィッド）</div></div>
+      <div class="row"><div class="time">13:00–14:30</div><div class="activity">サブロン地区でランチ</div></div>
+      <div class="row"><div class="time">14:00–15:30</div><div class="activity"><span class="highlight">マグリット美術館</span>（隣接、シュルレアリスムの巨匠）</div></div>
+      <div class="row"><div class="time">15:30–16:00</div><div class="activity">メトロ6号線でHeysel駅へ</div></div>
+      <div class="row"><div class="time">16:00–18:00</div><div class="activity"><span class="highlight">王宮温室</span>（アルフォンス・バラ設計、年3週間限定公開）</div></div>
+      <div class="row"><div class="time">18:30〜</div><div class="activity">中心部戻り、夕食</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 3 · APRIL 26 · MONDAY</div>
+    <h3>パリ日帰り（ルーブル一本集中）</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">06:30</div><div class="activity">ホテル発、ブリュッセル南駅へ</div></div>
+      <div class="row"><div class="time">07:25</div><div class="activity">Eurostarでパリへ</div></div>
+      <div class="row"><div class="time">08:50</div><div class="activity">パリ北駅着、メトロでルーブルへ</div></div>
+      <div class="row"><div class="time">09:30–11:00</div><div class="activity"><span class="highlight">ルーブル ドゥノン翼1F</span>：ニケ、ミロのヴィーナス</div></div>
+      <div class="row"><div class="time">11:00–13:00</div><div class="activity"><span class="highlight">ドゥノン翼2F</span>：モナリザ、大画廊、ヴェロネーゼ、ダヴィッド、ドラクロワ</div></div>
+      <div class="row"><div class="time">13:00–14:00</div><div class="activity">カフェまたはチュイルリー公園でランチ</div></div>
+      <div class="row"><div class="time">14:00–15:30</div><div class="activity"><span class="highlight">シュリー翼</span>：古代エジプト、ヴィーナスの中庭</div></div>
+      <div class="row"><div class="time">15:30–17:30</div><div class="activity"><span class="highlight">リシュリュー翼</span>：フェルメール「レースを編む女」、メディチ・ギャラリー</div></div>
+      <div class="row"><div class="time">18:00–19:00</div><div class="activity">パリ市内で夕食</div></div>
+      <div class="row"><div class="time">19:30頃</div><div class="activity">北駅発Eurostar</div></div>
+      <div class="row"><div class="time">21:00頃</div><div class="activity">ブリュッセル南駅着</div></div>
+    </div>
+    <div class="callout gold" style="margin-top: 20px;">
+      <strong>EUROSTAR予算目安</strong>
+      早朝便€35-60 + 復路夜便€70-95 = 1人約€105-155、2人約€210-310（販売開始直後の早割狙い）
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 4 · APRIL 27 · TUESDAY</div>
+    <h3>アントワープ日帰り</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">09:00</div><div class="activity">ブリュッセル中央駅発、列車約50分</div></div>
+      <div class="row"><div class="time">10:00–11:30</div><div class="activity"><span class="highlight">聖母大聖堂</span>：ルーベンス三連祭壇画</div></div>
+      <div class="row"><div class="time">11:30–12:00</div><div class="activity">ランチ</div></div>
+      <div class="row"><div class="time">12:00–14:00</div><div class="activity"><span class="highlight">ルーベンスの家</span>（火曜開館、水曜休館）</div></div>
+      <div class="row"><div class="time">14:00–15:00</div><div class="activity">街歩き、グローテマルクト</div></div>
+      <div class="row"><div class="time">15:00–17:30</div><div class="activity"><span class="highlight">KMSKA</span>：ファン・ダイク、ファン・エイク、メムリンク</div></div>
+      <div class="row"><div class="time">18:00</div><div class="activity">ブリュッセル戻り</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 5 · APRIL 28 · WEDNESDAY</div>
+    <h3>ゲント観光→Zaandam移動</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">09:00</div><div class="activity">NHチェックアウト、荷物はホテルに半日預け</div></div>
+      <div class="row"><div class="time">09:30</div><div class="activity">ブリュッセル中央駅発</div></div>
+      <div class="row"><div class="time">10:00</div><div class="activity">ゲント着</div></div>
+      <div class="row"><div class="time">10:30–13:30</div><div class="activity"><span class="highlight">聖バーフ大聖堂</span>：神秘の子羊（AR体験）</div></div>
+      <div class="row"><div class="time">13:30–14:30</div><div class="activity">コーレンマルクトでランチ</div></div>
+      <div class="row"><div class="time">14:30</div><div class="activity">ゲント→ブリュッセル中央駅戻り</div></div>
+      <div class="row"><div class="time">15:30</div><div class="activity">ホテルで荷物回収</div></div>
+      <div class="row"><div class="time">16:00</div><div class="activity">ブリュッセル中央駅発、アムステルダム経由</div></div>
+      <div class="row"><div class="time">19:00</div><div class="activity">アムステルダム中央駅着</div></div>
+      <div class="row"><div class="time">19:15</div><div class="activity">Zaandam着、Inntelチェックイン、夕食</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 6 · APRIL 29 · THURSDAY</div>
+    <h3>アムステルダム美術館デー＋運河散策</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">08:30</div><div class="activity">Inntel朝食、Zaandam発</div></div>
+      <div class="row"><div class="time">08:45</div><div class="activity">アムス中央駅、トラムでミュージアム広場へ</div></div>
+      <div class="row"><div class="time">09:00–12:00</div><div class="activity"><span class="highlight">国立美術館</span>：レンブラント「夜警」、フェルメール</div></div>
+      <div class="row"><div class="time">12:00–13:30</div><div class="activity">ミュージアム広場でランチ</div></div>
+      <div class="row"><div class="time">13:30–16:30</div><div class="activity"><span class="highlight">ゴッホ美術館</span>:「ひまわり」「アーモンドの花」</div></div>
+      <div class="row"><div class="time">16:35</div><div class="activity">トラム2 or 12でLeidseplein（5分）</div></div>
+      <div class="row"><div class="time">16:45–17:00</div><div class="activity">Leidsestraatを北上、Prinsengracht（皇子の運河）に到達</div></div>
+      <div class="row"><div class="time">17:00–17:20</div><div class="activity"><span class="highlight">Westerkerk（西教会）外観 + Anne Frank Huis外観</span>: 隣接する二つの歴史的場所、静かに佇む。Westermarkt広場のアンネ銅像も</div></div>
+      <div class="row"><div class="time">17:20–17:40</div><div class="activity"><span class="highlight">運河ベルト散策</span>: Prinsengracht沿いを南下、Keizersgracht、Herengrachtを渡る</div></div>
+      <div class="row"><div class="time">17:40–18:00</div><div class="activity"><span class="highlight">Magere Brug（跳ね橋）</span>: Amstel川沿いを散策、写真撮影</div></div>
+      <div class="row"><div class="time">18:00</div><div class="activity">Waterlooplein駅からメトロでアムス中央駅</div></div>
+      <div class="row"><div class="time">18:15</div><div class="activity">アムス中央駅 → Zaandam（直通12分）</div></div>
+      <div class="row"><div class="time">18:45〜</div><div class="activity">Zaandam着、夕食</div></div>
+    </div>
+    <div class="callout sage" style="margin-top: 20px;">
+      <strong>運河散策のコツ</strong>
+      4月下旬の日没は19:30頃。17時台はまだ十分明るく、夕方の斜光で運河の街並みが最も美しく見える時間帯です。歩きやすい靴推奨。雨天時はメトロ54番でWeesperplein駅→徒歩5分の代替ルートも。
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 7 · APRIL 30 · FRIDAY</div>
+    <h3>ハーグ・デルフト日帰り</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">08:30</div><div class="activity">Inntel発、身軽に出発</div></div>
+      <div class="row"><div class="time">09:00</div><div class="activity">アムス中央駅</div></div>
+      <div class="row"><div class="time">09:50</div><div class="activity">ハーグHS駅着</div></div>
+      <div class="row"><div class="time">10:00–13:00</div><div class="activity"><span class="highlight">マウリッツハイス美術館</span>：「真珠の耳飾りの少女」「デルフトの眺望」</div></div>
+      <div class="row"><div class="time">13:00–14:00</div><div class="activity">マウリッツハイス周辺でランチ</div></div>
+      <div class="row"><div class="time">14:00–14:15</div><div class="activity">デルフトへ列車</div></div>
+      <div class="row"><div class="time">14:30–17:30</div><div class="activity"><span class="highlight">デルフト街歩き</span>：新教会、市場広場、フェルメールセンター</div></div>
+      <div class="row"><div class="time">18:00</div><div class="activity">デルフト発、Zaandam戻り</div></div>
+      <div class="row"><div class="time">19:30</div><div class="activity">夕食</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-date">DAY 8 · MAY 01 · SATURDAY</div>
+    <h3>ザーンセ・スカンス朝＋帰国</h3>
+    <div class="timetable">
+      <div class="row"><div class="time">07:30–08:00</div><div class="activity">Inntelで朝食</div></div>
+      <div class="row"><div class="time">08:15</div><div class="activity">チェックアウト、荷物はホテルに預け</div></div>
+      <div class="row"><div class="time">08:30</div><div class="activity">Zaandam駅発</div></div>
+      <div class="row"><div class="time">08:45–09:30</div><div class="activity"><span class="highlight">風車並ぶKalverringdijk散策・写真撮影</span></div></div>
+      <div class="row"><div class="time">09:30–10:15</div><div class="activity"><span class="highlight">De Catharina Hoeve</span>:無料試食、チーズ購入</div></div>
+      <div class="row"><div class="time">10:15–10:45</div><div class="activity"><span class="highlight">Klompenmakerij</span>:木靴お土産購入</div></div>
+      <div class="row"><div class="time">10:45–11:00</div><div class="activity">カフェで軽く休憩</div></div>
+      <div class="row"><div class="time">11:15</div><div class="activity">Inntelで荷物回収</div></div>
+      <div class="row"><div class="time">11:30</div><div class="activity">Zaandam駅発</div></div>
+      <div class="row"><div class="time">11:42</div><div class="activity">アムステルダム中央駅着</div></div>
+      <div class="row"><div class="time">12:00</div><div class="activity">アムス→ブリュッセル空港行きIC直通</div></div>
+      <div class="row"><div class="time">14:30–15:00</div><div class="activity">ブリュッセル空港駅着</div></div>
+      <div class="row"><div class="time">15:00–17:30</div><div class="activity">チェックイン、ベルギーチョコ買い物</div></div>
+      <div class="row"><div class="time">17:30〜</div><div class="activity">早めの夕食</div></div>
+      <div class="row"><div class="time">19:30</div><div class="activity">NH232で日本へ</div></div>
+      <div class="row"><div class="time">5/2 16:10</div><div class="activity">成田着</div></div>
+    </div>
+    <div class="callout" style="margin-top: 20px;">
+      <strong>メーデー対策</strong>
+      フライト4時間半前到着で余裕確保。ストライキ判明時（出発1週間前）は直前Eurostar予約に切り替えるプランB用意。
+    </div>
+  </div>
+</section>
+
+<div class="ornament-divider">❦</div>
+
+<!-- VI. 美術館予約タイムライン -->
+<section id="museums">
+  <h2 class="section-title"><span class="num">VII</span>美術館予約タイムライン</h2>
+  <table>
+    <tr><th>いつ</th><th>何を予約</th><th>価格</th><th>URL/備考</th></tr>
+    <tr><td>2026年5月末</td><td>Eurostar 4/26 ブリュッセル⇔パリ往復</td><td>€100〜160</td><td>eurostar.com</td></tr>
+    <tr><td><strong>2026年7月</strong></td><td><strong>ゴッホ美術館（最優先）</strong></td><td>€25/人</td><td>tickets.vangoghmuseum.com</td></tr>
+    <tr><td>2026年9月</td><td>ルーブル美術館</td><td>€32/人</td><td>ticket.louvre.fr</td></tr>
+    <tr><td>2026年9月</td><td>マウリッツハイス</td><td>€19.5/人</td><td>mauritshuis.nl</td></tr>
+    <tr><td>2026年12月</td><td>聖バーフ大聖堂（AR）</td><td>€16/人</td><td>sintbaafskathedraal.be</td></tr>
+    <tr><td>2026年12月</td><td>ベルギー王立美術館＋マグリット</td><td>€20/人</td><td>fine-arts-museum.be</td></tr>
+    <tr><td>2026年12月</td><td>KMSKA</td><td>€20/人</td><td>kmska.be</td></tr>
+    <tr><td><strong>2027年1〜2月</strong></td><td><strong>王宮温室の販売開始情報をウォッチ</strong></td><td>-</td><td>koninklijke-serres-royales.be</td></tr>
+    <tr><td>2027年2月</td><td>アムステルダム国立美術館</td><td>€25/人</td><td>rijksmuseum.nl</td></tr>
+    <tr><td><strong>2027年3月販売開始日</strong></td><td><strong>王宮温室予約</strong>（3日で完売リスク）</td><td>€6前後</td><td>公式サイトから</td></tr>
+  </table>
+  <div class="callout">
+    <strong>詐欺サイト注意</strong>
+    公式URLまたは正規リセラー（GetYourGuide、Tiqets、Klook、Musement）のみ使用。
+  </div>
+</section>
+
+<!-- VII. 列車手配 -->
+<section id="trains">
+  <h2 class="section-title"><span class="num">VIII</span>列車手配</h2>
+  <h3 class="subsection">国際列車（要事前予約）</h3>
+  <table>
+    <tr><th>日付</th><th>区間</th><th>列車</th><th>予約タイミング</th><th>価格目安</th></tr>
+    <tr><td>4/26</td><td>Bruxelles-Midi → Paris Nord（早朝便）</td><td>Eurostar</td><td>11ヶ月前</td><td>€35〜60</td></tr>
+    <tr><td>4/26</td><td>Paris Nord → Bruxelles-Midi（夜便）</td><td>Eurostar</td><td>同上</td><td>€70〜95</td></tr>
+    <tr><td>4/28</td><td>Bruxelles-Centraal → Amsterdam Centraal</td><td>IC</td><td>当日購入可</td><td>€35〜45</td></tr>
+    <tr><td>5/1</td><td>Amsterdam Centraal → Brussels Airport</td><td>IC直通</td><td>当日購入可</td><td>€30〜40</td></tr>
+  </table>
+  <h3 class="subsection">国内・地域列車（予約不要・当日購入）</h3>
+  <table>
+    <tr><th>区間</th><th>列車</th><th>所要時間</th><th>価格</th></tr>
+    <tr><td>Bruxelles → Antwerpen</td><td>IC</td><td>約50分</td><td>€8</td></tr>
+    <tr><td>Bruxelles → Gent</td><td>IC</td><td>約30分</td><td>€10</td></tr>
+    <tr><td>Zaandam → Amsterdam Centraal</td><td>スプリンター</td><td>12分</td><td>€3</td></tr>
+    <tr><td>Amsterdam → Den Haag HS</td><td>IC</td><td>約50分</td><td>€13</td></tr>
+    <tr><td>Den Haag → Delft</td><td>スプリンター</td><td>12分</td><td>€3</td></tr>
+    <tr><td>Zaandam → Zaandijk-Zaanse Schans</td><td>スプリンター</td><td>3分</td><td>€2</td></tr>
+  </table>
+  <div class="callout sage">
+    <strong>駅の使い分け（重要）</strong>
+    国際列車（Eurostar）= ブリュッセル南駅（Bruxelles-Midi）／国内列車（ゲント、アントワープ）= ブリュッセル中央駅（Bruxelles-Centraal）
+  </div>
+</section>
+
+<!-- VIII. 予算サマリー -->
+<section id="budget">
+  <h2 class="section-title"><span class="num">IX</span>予算サマリー</h2>
+  <h3 class="subsection">入場料（2人合計）</h3>
+  <table>
+    <tr><th>日付</th><th>施設</th><th>1人</th><th>2人</th></tr>
+    <tr><td>4/25</td><td>ベルギー王立美術館＋マグリット</td><td>€20</td><td>€40</td></tr>
+    <tr><td>4/25</td><td>王宮温室</td><td>€6</td><td>€12</td></tr>
+    <tr><td>4/26</td><td>ルーブル美術館</td><td>€32</td><td>€64</td></tr>
+    <tr><td>4/27</td><td>アントワープ聖母大聖堂</td><td>€12</td><td>€24</td></tr>
+    <tr><td>4/27</td><td>ルーベンスの家</td><td>€15</td><td>€30</td></tr>
+    <tr><td>4/27</td><td>KMSKA</td><td>€20</td><td>€40</td></tr>
+    <tr><td>4/28</td><td>聖バーフ大聖堂（AR）</td><td>€16</td><td>€32</td></tr>
+    <tr><td>4/29</td><td>国立美術館</td><td>€25</td><td>€50</td></tr>
+    <tr><td>4/29</td><td>ゴッホ美術館</td><td>€25</td><td>€50</td></tr>
+    <tr><td>4/30</td><td>マウリッツハイス</td><td>€19.5</td><td>€39</td></tr>
+    <tr><td>4/30</td><td>デルフト新教会</td><td>€6</td><td>€12</td></tr>
+    <tr><td>5/1</td><td>ザーンセ・スカンス風車1基</td><td>€5</td><td>€10</td></tr>
+    <tr><th>入場料合計</th><th></th><th>€201.5</th><th>€403</th></tr>
+  </table>
+  <h3 class="subsection">グランドトータル</h3>
+  <table>
+    <tr><th>カテゴリ</th><th>1人</th><th>2人</th></tr>
+    <tr><td>入場料</td><td>€201.5</td><td>€403</td></tr>
+    <tr><td>列車代（国際）</td><td>€170-240</td><td>€340-480</td></tr>
+    <tr><td>列車代（国内・地域）</td><td>€106</td><td>€212</td></tr>
+    <tr><th>合計</th><th>€477-547</th><th>€955-1,095</th></tr>
+  </table>
+  <div class="callout gold">
+    <strong>日本円換算（1€=¥165として）</strong>
+    約16〜18万円（2人合計）
+  </div>
+  <p style="margin-top: 16px;"><strong>含まれていないもの</strong>: フライト代（ANA特典航空券）、ホテル代（€1,040.35）、食事代、海外旅行保険、お土産・雑費</p>
+</section>
+
+<!-- IX. 食事スポット -->
+<section id="dining">
+  <h2 class="section-title"><span class="num">X</span>食事スポット</h2>
+  <div class="callout">
+    <strong>食事戦略</strong>
+    シェア前提・ランチは軽め・ディナーは雰囲気重視・朝食はホテルで適当に・地元民が普段使う店優先。各場所に2〜3候補を用意して混雑時に備える。
+  </div>
+
+  <h3 class="subsection">🇧🇪 4/24(土) 夕食 - ブリュッセル到着日</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">'t Kelderke ⭐ ホテル近くで安心</div>
+    <div class="candidate-details">
+      <div>Grand Place 15（NH徒歩2分）</div>
+      <div>評価4.3（2,479件）／ 価格€€</div>
+      <div>中世の地下倉、温かい雰囲気。到着日は近場ベスト</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Fin de Siècle ⭐ 地元民の伝説的名店</div>
+    <div class="candidate-details">
+      <div>Rue des Chartreux 9 / 評価4.6（9,698件）/ €€</div>
+      <div>アール・ヌーヴォーの内装、予約不可で並ぶ</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">Nüetnigenough ⭐ ビール好きならここ</div>
+    <div class="candidate-details">
+      <div>Rue du Lombard 25 / 評価4.5（3,190件）/ €€</div>
+      <div>ベルギービール80種類以上、予約不可</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇧🇪 4/25(日) 昼食 - サブロン地区</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">La Dolce Mia ⭐ お手頃イタリアン</div>
+    <div class="candidate-details">
+      <div>Rue Haute 16 / 評価4.6 / €（お手頃）</div>
+      <div>ピザ・パスタで軽く、地元民のお気に入り</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Al Jannah ⭐ 地元の絶品レバノン料理</div>
+    <div class="candidate-details">
+      <div>Rue Blaes 59 / 評価4.3 / €（21€で満腹）</div>
+      <div>メゼ（前菜盛り合わせ）がシェアに最適</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">Pop Up Sablon</div>
+    <div class="candidate-details">
+      <div>Place du Grand Sablon 15/16 / €€</div>
+      <div>サブロン広場のテラス席</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇧🇪 4/25(日) 夕食 - ブリュッセル中心部</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">Le Bistro - Porte de Hal ⭐ 地元評価高</div>
+    <div class="candidate-details">
+      <div>Bd de Waterloo 138 / 評価4.6（6,547件）/ €€</div>
+      <div>カルボナード絶品、要予約</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND/THIRD</div>
+    <div class="candidate-name">Nüetnigenough / Fin de Siècle（前述）</div>
+    <div class="candidate-details">
+      <div>予約不可、並ぶ覚悟で</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇫🇷 4/26(月) パリ日帰り</h3>
+  <p><strong>昼食</strong>: ルーブル内カフェ・モリアン（第一）／ カフェ・マルリー（第二、眺望◯ €€€）／ チュイルリー公園のカフェ（第三）<br>※ ルーブルは一度出ると再入場不可、館内利用推奨</p>
+  <div class="candidate first">
+    <div class="candidate-label">DINNER · FIRST CHOICE</div>
+    <div class="candidate-name">Bouillon Chartier ⭐ パリ庶民派の聖地</div>
+    <div class="candidate-details">
+      <div>1896年創業の伝統「ブイヨン」（庶民食堂）</div>
+      <div>前菜€2-4、メイン€10-15 / €</div>
+      <div>並ぶこと多いが回転早い、Eurostar復路前にぴったり</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Le Relais du Louvre</div>
+    <div class="candidate-details">
+      <div>3 Rue du Louvre / 評価4.7 / €€</div>
+      <div>ビストロ料理、エスカルゴ・鴨</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇧🇪 4/27(火) アントワープ昼食</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">Chicon ⭐ 地元一の評価</div>
+    <div class="candidate-details">
+      <div>Kaasrui 6 / 評価4.8（816件）/ €€</div>
+      <div>伝統フランドル料理、要予約推奨</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Rubens Inn</div>
+    <div class="candidate-details">
+      <div>Wapper 17 / 評価4.1 / €€</div>
+      <div>ルーベンスの家隣接、立地最強</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">Hoffy's ⭐ ユダヤ系家庭料理</div>
+    <div class="candidate-details">
+      <div>Lange Kievitstraat 52 / 評価4.7 / €€</div>
+      <div>※ 金土休、観光ルートからやや外れる</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇧🇪 4/28(水) ゲント昼食</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">Souplounge ⭐ 地元学生に人気のスープ専門店</div>
+    <div class="candidate-details">
+      <div>Zuivelbrugstraat 4 / 評価4.5 / €（お手頃）</div>
+      <div>4種類のスープ、パンとリンゴ付き</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Soup'r ⭐ 中心部の人気スープ店</div>
+    <div class="candidate-details">
+      <div>Sint-Niklaasstraat 9 / 評価4.8 / €€</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">De Rechters</div>
+    <div class="candidate-details">
+      <div>Sint-Baafsplein 23 / 評価4.3 / €€</div>
+      <div>ル・クルーゼ鍋でシェア◯</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇳🇱 4/28(水) 夕食 - Zaandam着後</h3>
+  <div class="candidate first">
+    <div class="candidate-label">FIRST CHOICE</div>
+    <div class="candidate-name">'t Groene Pandje Zaandam ⭐</div>
+    <div class="candidate-details">
+      <div>Gedempte Gracht 77 / 評価4.4 / €€</div>
+      <div>地元家族連れに人気、※ 18時閉店</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Verrassing aan de Zaan</div>
+    <div class="candidate-details">
+      <div>Westzijde 82 / 評価4.6 / €€</div>
+      <div>ザーン川眺望</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">Inntel内レストラン</div>
+    <div class="candidate-details">
+      <div>移動疲れた日は無理せずホテル内も選択肢</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇳🇱 4/29(木) アムステルダム</h3>
+  <p><strong>昼食</strong>: Brasserie Zuiderbad（第一・2人€25、ミュージアム広場徒歩3分）／ Bistro Vincent（第二・ゴッホ美術館内）／ Barpiazza（第三・ピザ）</p>
+  <div class="candidate first">
+    <div class="candidate-label">DINNER · FIRST CHOICE</div>
+    <div class="candidate-name">The Pantry ⭐ 地元民の絶対的名店</div>
+    <div class="candidate-details">
+      <div>Leidsekruisstraat 21</div>
+      <div>評価4.7（9,350件）/ €€（地元価格）</div>
+      <div>伝統オランダ家庭料理、要予約</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Moeders ⭐ ユニーク体験</div>
+    <div class="candidate-details">
+      <div>Rozengracht 251 / 評価4.5 / €€</div>
+      <div>お母さんの写真の壁、ライスターフェル◎、要予約</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">New Dutch Amsterdam</div>
+    <div class="candidate-details">
+      <div>Prinsengracht 60-62（火曜定休）/ €€</div>
+    </div>
+  </div>
+
+  <h3 class="subsection">🇳🇱 4/30(金) ハーグ・デルフト</h3>
+  <p><strong>ハーグ昼食</strong>: Brasserie Mauritshuis（館内）／ Luden Den Haag（徒歩1分）／ Palmette（通し営業）</p>
+  <div class="candidate first">
+    <div class="candidate-label">DELFT DINNER · FIRST CHOICE</div>
+    <div class="candidate-name">Stads-Koffyhuis ⭐ お手頃で景色◎</div>
+    <div class="candidate-details">
+      <div>Oude Delft 133 / 評価4.5 / €€</div>
+      <div>運河に係留されたボート席、17時閉店</div>
+    </div>
+  </div>
+  <div class="candidate second">
+    <div class="candidate-label">SECOND</div>
+    <div class="candidate-name">Spijshuis De Dis ⭐ 地元の隠れ名店</div>
+    <div class="candidate-details">
+      <div>Beestenmarkt 36 / 評価4.6 / €€、夕方17時から</div>
+      <div>フェルメール風プレゼンテーション、要予約</div>
+    </div>
+  </div>
+  <div class="candidate third">
+    <div class="candidate-label">THIRD</div>
+    <div class="candidate-name">'t Postkantoor</div>
+    <div class="candidate-details">
+      <div>Hippolytusbuurt 14 / 評価4.4 / €€</div>
+      <div>ライスターフェル3コース、居間風内装</div>
+    </div>
+  </div>
+</section>
+
+<!-- X. お土産戦略 -->
+<section id="souvenirs">
+  <h2 class="section-title"><span class="num">XI</span>お土産戦略</h2>
+  <h3 class="subsection">ザーンセ・スカンス（5/1朝、オランダの伝統工芸品）</h3>
+  <ul>
+    <li>ゴーダチーズ（特に熟成タイプ）、スモークチーズ</li>
+    <li>木靴のミニチュア、キーホルダー</li>
+    <li>デルフトブルーの陶器（小物）</li>
+    <li>風車柄のグッズ</li>
+  </ul>
+  <h3 class="subsection">ブリュッセル空港（5/1夕方、ベルギーの逸品）</h3>
+  <ul>
+    <li>ベルギーチョコレート（Pierre Marcolini、Neuhaus、Godiva、Leonidas）</li>
+    <li>ベルギーワッフルクッキー</li>
+    <li>ベルギービール（持ち込み可否要確認）</li>
+  </ul>
+</section>
+
+<!-- XI. 重要な注意事項 -->
+<section id="notes">
+  <h2 class="section-title"><span class="num">XII</span>重要な注意事項</h2>
+  <h3 class="subsection">5/1メーデー対策</h3>
+  <ul>
+    <li><strong>ベルギー側は5/1が祝日</strong>、列車ダイヤが祝日ダイヤに</li>
+    <li><strong>オランダ側は通常ダイヤ</strong>で運行</li>
+    <li><strong>真のリスク</strong>: ベルギー側のSNCBストライキ</li>
+    <li>出発1週間前からSNCB公式（belgiantrain.be）でストライキ情報を週次チェック</li>
+    <li>海外旅行保険で公共交通機関遅延補償付き選択</li>
+    <li>空港到着は16:30〜17:00目標（フライト2.5時間前）</li>
+  </ul>
+  <h3 class="subsection">美術館休館日マッチング（旅程整合性確認済み）</h3>
+  <ul>
+    <li>✅ 王立美術館・マグリット: 日曜営業（月曜休館）→ 4/25訪問</li>
+    <li>✅ 王宮温室: 例年4月中旬〜5月上旬の3週間限定 → 4/25訪問</li>
+    <li>✅ ルーブル: 月曜営業・最も空いている日 → 4/26訪問</li>
+    <li>✅ ルーベンスの家: 火曜営業（水曜休館）→ 4/27訪問</li>
+    <li>✅ 聖バーフ大聖堂: 水曜営業 → 4/28訪問</li>
+    <li>✅ ゴッホ・国立美術館: 木曜営業 → 4/29訪問</li>
+    <li>✅ マウリッツハイス: 金曜営業 → 4/30訪問</li>
+  </ul>
+  <h3 class="subsection">ホテル予約注意点</h3>
+  <ul>
+    <li><strong>NH Brussels</strong>: ツインベッド明示、冷蔵庫有無、朝食込みか、キャンセル期限</li>
+    <li><strong>Inntel Zaandam</strong>: "Twin room with two separate beds"、"Not facing the train tracks"、冷蔵庫有無</li>
+  </ul>
+</section>
+
+<!-- XII. チェックリスト -->
+<section id="checklist">
+  <h2 class="section-title"><span class="num">XIII</span>出発前チェックリスト</h2>
+  <h3 class="subsection">2026年中</h3>
+  <div class="checklist">
+    <ul>
+      <li><strong>2026年5月末</strong>: Eurostar 4/26 ブリュッセル⇔パリ往復予約</li>
+      <li>2026年6〜7月: ホテル2軒の予約条件再確認</li>
+      <li>2026年7月: ゴッホ美術館予約（最優先）</li>
+      <li>2026年9月: ルーブル、マウリッツハイス予約</li>
+      <li>2026年12月: 聖バーフ大聖堂、ベルギー王立美術館、KMSKA予約</li>
+      <li>2026年12月頃: ibis Brussels予約キャンセル</li>
+    </ul>
+  </div>
+  <h3 class="subsection">2027年</h3>
+  <div class="checklist">
+    <ul>
+      <li>2027年1月: 王宮温室公式メルマガ登録、販売情報ウォッチ</li>
+      <li>2027年2月: アムステルダム国立美術館予約</li>
+      <li><strong>2027年3月販売開始日</strong>: 王宮温室即予約（3日で完売リスク）</li>
+      <li>出発2〜3ヶ月前: 海外旅行保険申込</li>
+      <li>出発1ヶ月前: 各美術館予約のQRコード/PDFを携帯保存</li>
+      <li>出発1週間前: SNCBストライキ情報最終確認</li>
+      <li>出発前日: 全予約のメール再確認</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>This guide was prepared on 15 May 2026<br>
+  for the journey of 24 April — 2 May 2027</p>
+  <p style="margin-top: 20px;">⁂ ⁂ ⁂</p>
+  <p style="margin-top: 20px; font-style: normal;">Bon voyage</p>
+</footer>
+
+</div>
+
+<!-- ライトボックス -->
+<div id="lightbox" class="lightbox" role="dialog" aria-label="拡大表示">
+  <span class="lightbox-hint">ESC / 背景クリックで閉じる</span>
+  <span class="lightbox-close" id="lightbox-close" aria-label="閉じる">×</span>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  // 全クリック可能画像にイベントリスナー設定
+  document.querySelectorAll('img.clickable').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const fullSrc = this.dataset.fullsrc || this.src;
+      const caption = this.dataset.caption || this.alt || '';
+      lightboxImg.src = fullSrc;
+      lightboxImg.alt = caption;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // 閉じる処理
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    // 画像をリセット（次回開く時にちらつかないように少し遅らせる）
+    setTimeout(() => { lightboxImg.src = ''; }, 250);
+  }
+
+  // 背景クリックで閉じる（画像クリックは閉じない）
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox || e.target === closeBtn) {
+      closeLightbox();
+    }
+  });
+
+  // 画像自体のクリックは伝播を止める（誤って閉じないように）
+  lightboxImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // ESCキーで閉じる
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

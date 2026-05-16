@@ -447,6 +447,85 @@
     top: -3px;
   }
 
+  /* コラム（記事風の特別ボックス） */
+  .column {
+    background: linear-gradient(180deg, #faf7ee 0%, #f5f1e8 100%);
+    padding: 40px 48px;
+    margin: 40px 0;
+    border-left: 4px solid var(--gold);
+    position: relative;
+  }
+
+  .column::before {
+    content: "COLUMN";
+    position: absolute;
+    top: -10px;
+    left: 32px;
+    background: var(--gold);
+    color: var(--paper);
+    padding: 4px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+  }
+
+  .column .column-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+
+  .column .column-subtitle {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+    color: var(--gold-deep);
+    margin-bottom: 24px;
+  }
+
+  .column h5 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .column p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  .column table {
+    background: white;
+    font-size: 0.88rem;
+    margin: 20px 0;
+  }
+
+  .column table th {
+    background: var(--paper-warm);
+    font-size: 0.85rem;
+  }
+
+  .column .signature {
+    text-align: right;
+    margin-top: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--grey-soft);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .column { padding: 28px 24px; }
+    .column .column-title { font-size: 1.3rem; }
+  }
+
   a { color: var(--gold-deep); }
   a:hover { color: var(--rust); }
 
@@ -731,7 +810,7 @@
   <table>
     <tr><th>日付</th><th>曜日</th><th>拠点</th><th>主要内容</th></tr>
     <tr><td>4/24</td><td>土</td><td>ブリュッセル</td><td>夕方着、グランプラスで夕食、中世旧市街夜散策</td></tr>
-    <tr><td>4/25</td><td>日</td><td>ブリュッセル</td><td>王立美術館・マグリット + 午後王宮温室</td></tr>
+    <tr><td>4/25</td><td>日</td><td>ブリュッセル</td><td>王立美術館・マグリット・オルタ博物館・王宮温室</td></tr>
     <tr><td>4/26</td><td>月</td><td>ブリュッセル</td><td>パリ日帰り（ルーブル4〜5時間）</td></tr>
     <tr><td>4/27</td><td>火</td><td>ブリュッセル</td><td>アントワープ日帰り、夕方ブリュッセル大聖堂散策</td></tr>
     <tr><td>4/28</td><td>水</td><td>Zaandam</td><td>ゲント観光→Zaandam移動</td></tr>
@@ -863,7 +942,7 @@
   <h4 class="spot-title">Art Nouveau Heritage<span class="jp">アール・ヌーヴォー建築巡り</span></h4>
   <p>ブリュッセルは19世紀末アール・ヌーヴォー運動の発祥地の一つ。<strong>ヴィクトル・オルタ</strong>（1861-1947）が活動した街で、世紀末建築の傑作が今も残る。</p>
   <ul>
-    <li><strong>Musée Horta（オルタ博物館）</strong>: ヴィクトル・オルタの自邸兼アトリエ（1898-1901）、世界遺産。曲線美と自然光が織りなす総合芸術。中心部からトラム25分・Saint-Gilles地区。<strong>火-金14-17:30、土日11-17:30、月曜休館、5/1も休館</strong>。要オンライン予約（15分ごと15人制限）。今回の旅程では訪問困難なため、外観のみまたは時間ができれば</li>
+    <li><strong>Musée Horta（オルタ博物館）</strong>: ヴィクトル・オルタの自邸兼アトリエ（1898-1901）、世界遺産。曲線美と自然光が織りなす総合芸術。中央階段とステンドグラスの天窓、植物的曲線の金属装飾、マホガニーと真鍮の調和。中心部からトラム25分・Saint-Gilles地区。<strong>火-金14-17:30、土日11-17:30、月曜休館、5/1も休館</strong>。要オンライン予約(15分ごと15人制限)。<strong>★ 4/25(日)午後に訪問予定</strong></li>
     <li><strong>Old England（MIM建物）</strong>: 1899年築の旧百貨店、ポール・サントノワ設計のアール・ヌーヴォー傑作。現在は<strong>楽器博物館（MIM）</strong>として使用。鉄とガラスのファサード、屋上カフェからのブリュッセル眺望が有名。王立美術館のすぐ隣</li>
     <li><strong>Maison Saint-Cyr（サン・シル邸／外観のみ）</strong>: アンビオリックス広場、幅わずか4mの極細邸宅（1903）。アール・ヌーヴォーの絢爛様式</li>
     <li><strong>Hôtel Tassel（タッセル邸／外観のみ）</strong>: オルタ作（1893）、世界最初のアール・ヌーヴォー邸宅、世界遺産。Louise地区</li>
@@ -871,7 +950,49 @@
   </ul>
   <div class="callout gold">
     <strong>鑑賞のコツ</strong>
-    オルタ博物館は今回スケジュール上難しいため、<strong>MIMの建物（Old England）でアール・ヌーヴォー建築を体感</strong>するのがおすすめ。屋上カフェで休憩しながら楽器コレクションも楽しめます。Saint-Cyr邸やTassel邸は外観だけでも十分美しく、街歩きの途中で立ち寄れます。
+    <strong>オルタ博物館は4/25(日)午後に訪問予定の最重要スポット</strong>。事前予約必須、王宮温室と同じく2027年3月頃にオンラインで枠を確保。MIM(Old England建物)は王立美術館訪問時に外観だけでも見ておくと、アール・ヌーヴォーの広がりを実感できます。Saint-Cyr邸やTassel邸は外観だけでも十分美しく、時間と体力があれば街歩きの途中で立ち寄れます。
+  </div>
+
+  <div class="column">
+    <div class="column-title">Victor Horta — 鉄と光と植物の建築家</div>
+    <div class="column-subtitle">ガウディとの対話、世紀末ヨーロッパの総合芸術</div>
+
+    <p><strong>ヴィクトル・オルタ</strong>（1861-1947）は、ベルギー・ヘントに生まれた建築家。建築学校で古典様式を学んだ後、ブリュッセルで独立。1893年、32歳で設計した<strong>タッセル邸</strong>が、後に「世界最初のアール・ヌーヴォー建築」と呼ばれることになります。</p>
+
+    <p>当時のヨーロッパ建築は、ルネサンス、バロック、ネオゴシックなど、過去の様式の引用に終始していました。オルタはそこに「<strong>新しいもの（Art Nouveau）</strong>」を持ち込みます。それは、産業革命がもたらした<strong>鉄とガラス</strong>という新素材を、隠すのではなく、堂々と見せる建築でした。しかも、その鉄を、まるで植物の蔦のように曲げて、空間に生命を吹き込んだのです。</p>
+
+    <h5>「鞭のしなり」— オルタのシグネチャー</h5>
+    <p>オルタの曲線は「<strong>whiplash curve（鞭のしなり）</strong>」と呼ばれます。鞭が空中で描く一瞬の軌跡——ぴんと張った緊張と、流れるような優雅さを併せ持つ曲線。鉄の手すり、ステンドグラスの鉛枠、壁画の装飾、すべてがこの「動きを凍らせた形」で統一されています。ガウディの曲線が「自然の形そのもの」だとすれば、オルタの曲線は「<strong>自然の運動エネルギーを抽出したもの</strong>」と言えるでしょう。</p>
+
+    <h5>中央階段が、家の魂</h5>
+    <p>オルタ自邸（1898-1901）の心臓部は<strong>中央階段</strong>です。家の中央に階段を据え、その上に大きなガラス天窓を設け、すべての部屋がこの「光の井戸」を取り囲むように配置されています。階段の手すりは植物の蔦が螺旋を描くように、上へ上へと伸びていきます。家の中に小さな大聖堂があるような、親密にして荘厳な空間体験。</p>
+
+    <h5>ガウディとの対話 — 同じ運動の二つの極</h5>
+    <p>バルセロナのアントニ・ガウディ（1852-1926）とブリュッセルのオルタ。ほぼ同時代に活動し、同じ「自然の曲線を建築化する」という志を共有しながら、二人はまったく異なる答えを出しました。</p>
+
+    <table>
+      <tr><th></th><th>ガウディ（バルセロナ）</th><th>オルタ（ブリュッセル）</th></tr>
+      <tr><td>インスピレーション</td><td>岩、骨、海、自然の有機形態</td><td>植物の茎、つる、鞭のしなり</td></tr>
+      <tr><td>構造</td><td>カテナリーアーチ、傾斜柱</td><td>鉄骨で空間を解放、ガラス天窓</td></tr>
+      <tr><td>表現</td><td>大胆、彫塑的、ダイナミック</td><td>繊細、流麗、優雅</td></tr>
+      <tr><td>規模</td><td>大規模建築（教会、集合住宅）</td><td>邸宅、内装、家具</td></tr>
+      <tr><td>色彩</td><td>カラフル（トレンカディスのモザイク）</td><td>落ち着いた木目、真鍮、ステンドグラス</td></tr>
+      <tr><td>体験</td><td>圧倒される、夢の中にいるよう</td><td>親密、住みたくなる、人間スケール</td></tr>
+    </table>
+
+    <p>ガウディが「<strong>大聖堂的なスケールで自然を再構築した</strong>」のに対し、オルタは「<strong>住宅というスケールで植物の動きを建築化した</strong>」。ガウディの建築が圧倒的なヴィジョンの表明だとすれば、オルタの建築は住む人の日常に寄り添う優雅な提案です。</p>
+
+    <p>そして実は、お二人が4/25に訪れるオルタ自邸（1898-1901）は、ガウディの代表作<strong>カサ・バトリョ（1904-1906）やカサ・ミラ（1906-1912）よりも先に建てられた</strong>もの。「アール・ヌーヴォー」という新しい運動が、ヨーロッパ各地で同時多発的に花開いた時代の、ベルギー側の最初の決定的な作品なのです。</p>
+
+    <h5>共通点 — 世紀末ヨーロッパの問い</h5>
+    <p>二人の天才には共通点もあります。両者とも、<strong>鉄を装飾要素として剥き出しに使い</strong>、<strong>直線を嫌い曲線で空間を構成し</strong>、<strong>建築と工芸を一体の総合芸術（Gesamtkunstwerk）</strong>として捉えました。家具、照明、ガラス、金属細工、すべてを建築家自身がデザインする。手仕事の美を、機械生産の時代に取り戻そうとした世紀末の問い——その問いに、ガウディはバルセロナで、オルタはブリュッセルで、別の答えを出したのです。</p>
+
+    <h5>オルタを見る時に味わいたいこと</h5>
+    <p>まず、玄関を入った瞬間の<strong>光の感覚</strong>。中央階段の上から降り注ぐ天窓の光が、植物的に曲がりくねった金属手すりに反射して、空間全体が薄黄金色に染まる。これがアール・ヌーヴォー的「光」の体験です。</p>
+    <p>次に、<strong>細部</strong>。ドアノブ、壁画、床のモザイク、照明器具、窓枠のガラス工芸——すべてが計算された曲線で統一されています。ガウディの大胆さと違い、オルタは細部の積み重ねで魅了します。時間をかけて読み解くほど深まる体験。</p>
+    <p>そして、バルセロナでの記憶と並べてみてください。「<strong>同じ時代に、ヨーロッパの別の場所で、別の天才が、別の答えを出した</strong>」という感慨。それは単なる建築鑑賞を超えた、世紀末ヨーロッパという時代との対話になるはずです。</p>
+
+    <div class="signature">— 今回の旅の総合芸術の系譜のひとつとして —</div>
   </div>
 
   <h4 class="spot-title">Musées Royaux des Beaux-Arts<span class="jp">ベルギー王立美術館</span></h4>
@@ -1256,18 +1377,24 @@
 
   <div class="day-card">
     <div class="day-date">DAY 2 · APRIL 25 · SUNDAY</div>
-    <h3>ブリュッセル美術デー</h3>
+    <h3>ブリュッセル美術＆建築デー</h3>
     <div class="timetable">
-      <div class="row"><div class="time">10:00–13:00</div><div class="activity"><span class="highlight">ベルギー王立美術館</span>（ブリューゲル、ルーベンス、ボッシュ、ダヴィッド）</div></div>
-      <div class="row"><div class="time">13:00–14:30</div><div class="activity">サブロン地区でランチ</div></div>
-      <div class="row"><div class="time">14:00–15:30</div><div class="activity"><span class="highlight">マグリット美術館</span>（隣接、シュルレアリスムの巨匠）</div></div>
-      <div class="row"><div class="time">15:30–16:00</div><div class="activity">メトロ6号線でHeysel駅へ</div></div>
-      <div class="row"><div class="time">16:00–18:00</div><div class="activity"><span class="highlight">王宮温室</span>（アルフォンス・バラ設計、年3週間限定公開）</div></div>
+      <div class="row"><div class="time">10:00–12:00</div><div class="activity"><span class="highlight">ベルギー王立美術館</span>（ブリューゲル、ルーベンス、ボッシュ、ダヴィッド、集中鑑賞）</div></div>
+      <div class="row"><div class="time">12:00–13:00</div><div class="activity">サブロン地区でランチ</div></div>
+      <div class="row"><div class="time">13:00–13:30</div><div class="activity"><span class="highlight">マグリット美術館</span>（ハイライト30分巡り：光の帝国、人の子、これはパイプではない関連作品）</div></div>
+      <div class="row"><div class="time">13:30–14:15</div><div class="activity">メトロ+トラムでSaint-Gilles地区へ</div></div>
+      <div class="row"><div class="time">14:15–16:00</div><div class="activity"><span class="highlight">★ オルタ博物館</span>（ヴィクトル・オルタ自邸、世界遺産、アール・ヌーヴォーの最高峰）</div></div>
+      <div class="row"><div class="time">16:00–16:45</div><div class="activity">メトロでHeysel駅へ</div></div>
+      <div class="row"><div class="time">16:45–18:00</div><div class="activity"><span class="highlight">王宮温室</span>（アルフォンス・バラ設計、年3週間限定公開）</div></div>
       <div class="row"><div class="time">18:30〜</div><div class="activity">中心部戻り、夕食</div></div>
     </div>
-    <div class="callout" style="margin-top: 20px;">
-      <strong>余裕があれば: MIM（楽器博物館）</strong>
-      王立美術館の隣にあるOld England（1899年築アール・ヌーヴォー建築）。屋上カフェからのブリュッセル眺望が有名。マグリット美術館の前後（13:30-14:00または15:30前後）に建物外観と屋上カフェだけ寄るのも◯。本格的に楽器コレクションを見るなら別の半日が必要。
+    <div class="callout gold" style="margin-top: 20px;">
+      <strong>マグリット30分巡りのコツ</strong>
+      入口で館内マップを取って、代表作のあるフロアに直行。「光の帝国」「人の子（リンゴで顔を覆う男）」「これはパイプではない」関連作品、を中心に。気に入った作品の前で立ち止まる時間優先で、流し見ていい部屋は飛ばす。
+    </div>
+    <div class="callout sage" style="margin-top: 16px;">
+      <strong>オルタ博物館訪問のコツ</strong>
+      Rue Américaine 25、Saint-Gilles地区。<strong>要オンライン事前予約（15分ごと15人制限）</strong>、王宮温室と同じく2027年3月頃に予約。中央階段とステンドグラスの天窓、植物的曲線の金属装飾、マホガニーと真鍮の調和——空間そのものが芸術作品。中心部からトラムでLouise駅→トラム92/97でJanson駅下車徒歩。
     </div>
   </div>
 
@@ -1408,6 +1535,7 @@
     <tr><td><strong>2027年1〜2月</strong></td><td><strong>王宮温室の販売開始情報をウォッチ</strong></td><td>-</td><td>koninklijke-serres-royales.be</td></tr>
     <tr><td>2027年2月</td><td>アムステルダム国立美術館</td><td>€25/人</td><td>rijksmuseum.nl</td></tr>
     <tr><td><strong>2027年3月販売開始日</strong></td><td><strong>王宮温室予約</strong>（3日で完売リスク）</td><td>€6前後</td><td>公式サイトから</td></tr>
+    <tr><td><strong>2027年3月</strong></td><td><strong>オルタ博物館予約</strong>（4/25日曜午後の14:15-14:30枠、15分ごと15人制限）</td><td>€12/人</td><td>hortamuseum.be</td></tr>
   </table>
   <div class="callout">
     <strong>詐欺サイト注意</strong>
@@ -1450,6 +1578,7 @@
     <tr><th>日付</th><th>施設</th><th>1人</th><th>2人</th></tr>
     <tr><td>4/25</td><td>ベルギー王立美術館＋マグリット</td><td>€20</td><td>€40</td></tr>
     <tr><td>4/25</td><td>王宮温室</td><td>€6</td><td>€12</td></tr>
+    <tr><td>4/25</td><td>オルタ博物館</td><td>€12</td><td>€24</td></tr>
     <tr><td>4/26</td><td>ルーブル美術館</td><td>€32</td><td>€64</td></tr>
     <tr><td>4/27</td><td>アントワープ聖母大聖堂</td><td>€12</td><td>€24</td></tr>
     <tr><td>4/27</td><td>ルーベンスの家</td><td>€15</td><td>€30</td></tr>
@@ -1460,15 +1589,15 @@
     <tr><td>4/30</td><td>マウリッツハイス</td><td>€19.5</td><td>€39</td></tr>
     <tr><td>4/30</td><td>デルフト新教会</td><td>€6</td><td>€12</td></tr>
     <tr><td>5/1</td><td>ザーンセ・スカンス風車1基</td><td>€5</td><td>€10</td></tr>
-    <tr><th>入場料合計</th><th></th><th>€201.5</th><th>€403</th></tr>
+    <tr><th>入場料合計</th><th></th><th>€213.5</th><th>€427</th></tr>
   </table>
   <h3 class="subsection">グランドトータル</h3>
   <table>
     <tr><th>カテゴリ</th><th>1人</th><th>2人</th></tr>
-    <tr><td>入場料</td><td>€201.5</td><td>€403</td></tr>
+    <tr><td>入場料</td><td>€213.5</td><td>€427</td></tr>
     <tr><td>列車代（国際）</td><td>€170-240</td><td>€340-480</td></tr>
     <tr><td>列車代（国内・地域）</td><td>€106</td><td>€212</td></tr>
-    <tr><th>合計</th><th>€477-547</th><th>€955-1,095</th></tr>
+    <tr><th>合計</th><th>€489-559</th><th>€979-1,119</th></tr>
   </table>
   <div class="callout gold">
     <strong>日本円換算（1€=¥165として）</strong>
@@ -1751,6 +1880,7 @@
   <ul>
     <li>✅ 王立美術館・マグリット: 日曜営業（月曜休館）→ 4/25訪問</li>
     <li>✅ 王宮温室: 例年4月中旬〜5月上旬の3週間限定 → 4/25訪問</li>
+    <li>✅ オルタ博物館: 土日11-17:30開館（月曜・5/1休館）→ 4/25訪問</li>
     <li>✅ ルーブル: 月曜営業・最も空いている日 → 4/26訪問</li>
     <li>✅ ルーベンスの家: 火曜営業（水曜休館）→ 4/27訪問</li>
     <li>✅ 聖バーフ大聖堂: 水曜営業 → 4/28訪問</li>
@@ -1784,6 +1914,7 @@
       <li>2027年1月: 王宮温室公式メルマガ登録、販売情報ウォッチ</li>
       <li>2027年2月: アムステルダム国立美術館予約</li>
       <li><strong>2027年3月販売開始日</strong>: 王宮温室即予約（3日で完売リスク）</li>
+      <li><strong>2027年3月</strong>: オルタ博物館予約（4/25日曜14:15枠、15分ごと15人制限）</li>
       <li>出発2〜3ヶ月前: 海外旅行保険申込</li>
       <li>出発1ヶ月前: 各美術館予約のQRコード/PDFを携帯保存</li>
       <li>出発1週間前: SNCBストライキ情報最終確認</li>

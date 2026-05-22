@@ -342,6 +342,68 @@
   .callout.gold strong { color: var(--gold-deep); }
   .callout.sage strong { color: var(--sage); }
 
+  /* 「みどころ」「このプランの特徴」用の上品スタイル */
+  .highlights-box {
+    margin: 28px 0 0;
+    padding: 22px 28px 20px;
+    background: linear-gradient(180deg, rgba(168, 133, 74, 0.04), rgba(168, 133, 74, 0.08));
+    border: 1px solid rgba(168, 133, 74, 0.25);
+    position: relative;
+  }
+  .highlights-box::before {
+    content: "✦";
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: white;
+    color: var(--gold);
+    padding: 0 10px;
+    font-size: 0.95rem;
+  }
+  .day-card .highlights-box::before { background: white; }
+  #overview .highlights-box::before { background: var(--paper); }
+  .highlights-box .heading {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .highlights-box p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin: 0;
+    color: var(--ink-soft);
+  }
+  .highlights-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .highlights-box ul li {
+    padding: 8px 0 8px 22px;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    border-bottom: 1px dashed rgba(168, 133, 74, 0.2);
+  }
+  .highlights-box ul li:last-child { border-bottom: none; }
+  .highlights-box ul li::before {
+    content: "❋";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--gold);
+    font-size: 0.9rem;
+  }
+  .highlights-box ul li strong {
+    font-family: 'Shippori Mincho', serif;
+    color: var(--rust);
+    font-weight: 600;
+  }
+
   /* 各日のタイムテーブル */
   .day-card {
     background: white;
@@ -805,7 +867,7 @@
   </div>
 
   <div class="candidate second">
-    <div class="candidate-label">LEIDEN — 3 NIGHTS · 検討中（2026年秋に価格確認後判断）</div>
+    <div class="candidate-label">LEIDEN — 3 NIGHTS · 検討中（2026年6月頃に価格確認後判断）</div>
     <div class="candidate-name">Golden Tulip Leiden Centre</div>
     <div class="candidate-details">
       <div>期間: 4/28〜4/30（3泊）/ GW予想€450〜600 / 評価4.2</div>
@@ -814,7 +876,7 @@
       <div>メリット: 4/30ハーグまで15分・デルフト25分・ロッテルダム25分と格段に近い</div>
       <div>メリット: 5/1プランBのキューケンホフへライデン駅から直通バス854（25分）でスーツケース不要</div>
       <div>デメリット: 4/29アムス美術館地区まで約40分（Amsterdam Zuid経由トラム）</div>
-      <div>⚠️ Inntel（€376.83）より€75〜225高くなる見込み。2026年秋に価格確認後Inntelをキャンセルして乗り換えるか判断</div>
+      <div>⚠️ Inntel（€376.83）より€75〜225高くなる見込み。<strong>2026年6月頃</strong>に2027年4月末分の価格が出る見込み（公式は現時点で2027年3月分まで販売中）。価格確認後Inntelをキャンセルして乗り換えるか判断</div>
     </div>
   </div>
 
@@ -822,7 +884,7 @@
     <strong>Zaandam vs ライデン — 判断の軸</strong>
     4/29（アムス）重視・5/1プランAのザーンセ → <strong>Zaandam</strong> が有利<br>
     4/30（ハーグ・デルフト・ロッテルダム）重視・5/1プランBのキューケンホフ → <strong>ライデン</strong> が有利<br>
-    プランA/Bの選択と価格をセットで2026年秋に最終判断。
+    プランA/Bの選択と価格をセットで<strong>2026年6〜7月頃</strong>に最終判断。
   </div>
 </section>
 
@@ -840,6 +902,17 @@
     <tr><td><a href="#day-430">4/30</a></td><td>金</td><td><a href="#city-amsterdam">Zaandam</a></td><td><a href="#city-hague">ハーグ</a>・<a href="#city-delft">デルフト</a>・<a href="#city-rotterdam">ロッテルダム</a>（Depot）日帰り</td></tr>
     <tr><td><a href="#day-501">5/1</a></td><td>土</td><td>機中泊</td><td>プランA: <a href="#spot-zaanse">ザーンセ・スカンス</a> / プランB: キューケンホフ → 帰国</td></tr>
   </table>
+
+  <div class="highlights-box">
+    <div class="heading">このプランの特徴</div>
+    <ul>
+      <li><strong>北方絵画史を地理的に辿る一筆書き</strong> — ブリューゲルとボッシュ（ブリュッセル）→ ルーベンス（アントワープ）→ ファン・エイク兄弟「神秘の子羊」（ゲント）→ ルーブルのフランドル絵画（パリ）→ レンブラントとフェルメール（アムステルダム・ハーグ）。15世紀北方ルネサンスから17世紀オランダ黄金時代まで、絵画史を旅程そのもので辿る構成。</li>
+      <li><strong>2拠点滞在で荷物移動は1回だけ</strong> — ブリュッセル4泊・Zaandam（またはライデン）3泊。スーツケースを動かすのは4/28の1回のみで、日帰り旅の機動性を最大化。日帰り先はパリ、ゲント、アントワープ、ハーグ・デルフト・ロッテルダムの4方向。</li>
+      <li><strong>大美術館と街歩きの交互配置</strong> — 王立美術館（4/25）→ ルーブル（4/26）→ ゲント街歩き（4/27）→ KMSKA（4/28）→ 国立美術館・ゴッホ（4/29）→ マウリッツハイス＋3都市散策（4/30）。集中と発散を交互に挟み、疲労が偏らない設計。</li>
+      <li><strong>建築と絵画を同時に楽しむ</strong> — オルタ邸（アール・ヌーヴォー発祥）、ブリュッセル王宮温室（19世紀ガラス建築）、Depot Boijmans（鏡張りの巨大球体）など、絵画以外の見どころを各都市に配置。</li>
+      <li><strong>GW後半メーデー対策込み</strong> — 5/1のベルギー側ストライキリスクを想定し、プランA（ザーンセ）・プランB（キューケンホフ）の両プランを用意。前日までスト情報を確認して柔軟に判断できる構成。</li>
+    </ul>
+  </div>
 </section>
 
 <div class="ornament-divider">❦</div>
@@ -964,6 +1037,10 @@
       <strong>到着日は無理せず</strong>
       長距離フライト後なので、ホテル至近のグランプラスで夕食・ライトアップを楽しむだけで十分。中世旧市街散策は翌日帰りに。
     </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>ヴィクトル・ユゴーが「世界で最も美しい広場」と讃えた<strong>グランプラス</strong>。15〜17世紀のギルドハウスに囲まれた中世広場で、これから始まる10日間の絵画と建築の旅の幕開け。日没後20:00頃から始まる金箔のライトアップは、旅の最初の夜にふさわしい荘厳さです。市庁舎尖塔の天使ミカエル像を見上げながら、ベルギービール一杯で乾杯を。</p>
+    </div>
   </div>
 
   <div class="day-card">
@@ -981,6 +1058,10 @@
     <div class="callout gold" style="margin-top: 20px;">
       <strong>オルタ美術館のコツ</strong>
       ヴィクトール・オルタが自ら設計・居住した邸宅がそのまま美術館に。アール・ヌーヴォーを「生きた空間」として体験できる唯一の場所。入場者数制限あり（狭い階段のため）、<strong>事前予約必須</strong>。撮影不可。所要1〜1.5時間。Rue Américaine 25、Saint-Gilles地区。
+    </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>一日で<strong>北方ルネサンスから20世紀シュルレアリスム、そしてアール・ヌーヴォーまで</strong>500年の美術史を縦断する濃密な日。王立美術館ではブリューゲル「ベツレヘムの戸籍調査」とボッシュ「聖アントワーヌの誘惑」が15〜16世紀フランドル絵画の精髄を見せ、マグリット美術館では「光の帝国」が昼と夜の不可思議な共存を提示します。クライマックスは午後のオルタ邸——絵画ではなく<strong>「住むための芸術」</strong>として19世紀末ベルギーが生んだアール・ヌーヴォーの発祥地。曲線の階段、植物的なステンドグラス、空間そのものが作品です。</p>
     </div>
   </div>
 
@@ -1004,6 +1085,10 @@
       <strong>EUROSTAR予算目安</strong>
       早朝便€35-60 + 復路夜便€70-95 = 1人約€105-155、2人約€210-310（販売開始直後の早割狙い）
     </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>Eurostarでブリュッセルからパリまで1時間25分の小旅行。<strong>ルーブル一本集中</strong>で挑む一日です。ドゥノン翼の「サモトラケのニケ」「ミロのヴィーナス」「モナリザ」の正統派ハイライトから、シュリー翼の古代エジプト、リシュリュー翼の<strong>フェルメール「レースを編む女」</strong>へ。今回の旅のテーマである北方絵画の文脈で言えば、リシュリュー翼のフランドル絵画コーナーが翌々日のアントワープ・KMSKAと響き合う伏線になります。再入場不可ルールのため、館内カフェでランチを取りながら一日かけて宮殿を巡る贅沢な時間を。</p>
+    </div>
   </div>
 
   <div class="day-card">
@@ -1026,6 +1111,10 @@
       <strong>朝一の温室のコツ</strong>
       温室は<strong>9:30開館・15:30最終入場・月曜休館（4/27火曜は✅）</strong>。朝一は混雑前で光も柔らかく、年3週間限定をじっくり楽しめます。
     </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>朝は<strong>年3週間限定のラーケン王宮温室</strong>。1874〜95年にアルフォンス・バラが設計したガラスとドーム建築は、19世紀後半の鉄とガラスの建築美の到達点です。朝の柔らかな斜光が植物のシルエットを浮かび上がらせる時間帯がベスト。<br><br>午後はゲントへ移動し、本日の真の主役<strong>ファン・エイク兄弟「神秘の子羊」</strong>と対面。1432年完成、12のパネルからなるこの祭壇画は<strong>北方ルネサンス絵画の出発点</strong>であり、油彩画の技法を確立した記念碑。AR体験で各部の図像と修復の物語をたどれます。聖バーフ大聖堂の後はGraslei（穀物河岸）沿いを歩き、中世フランドル繁栄期の街並みを夕暮れに眺める時間も。</p>
+    </div>
   </div>
 
   <div class="day-card">
@@ -1042,8 +1131,6 @@
       <div class="row"><div class="time">15:00–17:30</div><div class="activity"><span class="highlight"><a href="#spot-kmska">KMSKA</a></span>：ファン・ダイク、ファン・エイク、メムリンク（2時間半）</div></div>
       <div class="row"><div class="time">17:30</div><div class="activity">アントワープ中央駅に戻り、ロッカーからスーツケース回収</div></div>
       <div class="row"><div class="time">18:00頃</div><div class="activity"><span class="highlight">アントワープ中央駅発 → EuroCity直通 → スキポール空港</span>（約1時間強）</div></div>
-      <div class="row"><div class="time">19:15頃</div><div class="activity">スキポール空港着 → Zaandam行き直通（約20分）</div></div>
-      <div class="row"><div class="time">19:30頃</div><div class="activity">Zaandam着、Inntelチェックイン、夕食</div></div>
       <div class="row"><div class="time">18:40頃</div><div class="activity">スキポール空港着 → Zaandam行き直通（約20分）</div></div>
       <div class="row"><div class="time">19:00頃</div><div class="activity">Zaandam着、Inntelチェックイン、夕食</div></div>
     </div>
@@ -1058,6 +1145,10 @@
     <div class="callout" style="margin-top: 16px;">
       <strong>ルーベンスの家について</strong>
       現在改修中につき歴史的邸宅は閉鎖。聖母大聖堂・聖パウロ教会・KMSKAの三か所でルーベンスの世界を十分堪能できます。
+    </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>移動日でありながら<strong>「ルーベンスの街」アントワープ</strong>を一日かけて巡る贅沢な日。テーマは「教会の絵」と「美術館の絵」の比較。聖母大聖堂の<strong>三連祭壇画「キリストの昇架」「キリストの降架」</strong>は、ルーベンスが本来祈りの場として描いた本来の位置に掛かっており、午後の聖パウロ教会の「キリストの鞭打ち」と合わせて、宗教画が宗教空間で発する力を体感できます。<br><br>クライマックスは<strong>KMSKA（王立美術館）</strong>。2022年に大改装を終え、ファン・エイク、ルーベンス、メムリンク、アンソールに加え、現代美術まで網羅。前日ゲントで観た「神秘の子羊」のファン・エイクが、ここでは「井戸の聖母」など別の傑作で再登場します。北方絵画の系譜を二日連続で辿る贅沢な構成。</p>
     </div>
   </div>
 
@@ -1082,6 +1173,10 @@
     <div class="callout sage" style="margin-top: 20px;">
       <strong>運河散策のコツ</strong>
       4月下旬の日没は19:30頃。17時台はまだ十分明るく、夕方の斜光で運河の街並みが最も美しく見える時間帯です。歩きやすい靴推奨。雨天時はメトロ54番でWeesperplein駅→徒歩5分の代替ルートも。
+    </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>オランダ絵画の<strong>二大頂点を一日で</strong>。国立美術館の<strong>レンブラント「夜警」</strong>は17世紀オランダ黄金時代の集大成、フェルメールの「牛乳を注ぐ女」「デルフトの小路」は静かな日常の永遠化。一方、ゴッホ美術館では<strong>「ひまわり」「アーモンドの花咲く枝」「黄色い家」</strong>と画家の生涯を時系列で追体験できます。<br><br>夕方からは<strong>運河ベルト散策</strong>。1612年に計画され17世紀に完成した三本の同心円状運河（Herengracht・Keizersgracht・Prinsengracht）はユネスコ世界遺産。Westerkerk（西教会）とアンネ・フランクの家、Magere Brug（やせ橋）まで歩けば、絵画で見た風景が街並みのなかに息づいていることがわかります。日没前の斜光がもっとも運河を美しく見せる時間帯です。</p>
     </div>
   </div>
 
@@ -1115,6 +1210,10 @@
     <div class="callout" style="margin-top: 16px;">
       <strong>デルフト1時間のコツ</strong>
       市場広場（Markt）と新教会（Nieuwe Kerk）を中心に、運河沿いの街並みを歩くだけでフェルメールの「デルフトの眺望」の世界を体感できます。フェルメールセンターは今回省略。
+    </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>三都市を巡る一日。<strong>ハーグ・マウリッツハイス</strong>では、フェルメール「真珠の耳飾りの少女」と「デルフトの眺望」、レンブラント「テュルプ博士の解剖学講義」が同じ屋根の下に揃う贅沢な空間。とくに「デルフトの眺望」は、このあと訪れるデルフトの実景と照らし合わせる前段階として大切な体験になります。<br><br>続く<strong>デルフト</strong>では、フェルメールが生まれ、暮らし、埋葬された街そのものを歩きます。新教会、市場広場、運河沿いの街並みは、絵画から抜け出たような時間が止まった風景。<br><br>最後の<strong>ロッテルダム・Depot Boijmans Van Beuningen</strong>では一転して21世紀の建築体験へ。MVRDV設計の<strong>鏡張りの巨大球体</strong>は2021年開館、世界初の公開型収蔵庫。15万点超の収蔵品が見学可能なオープン構造で、屋上には白樺75本の庭園とロッテルダムを一望するパノラマが広がります。<strong>フェルメール、北方ルネサンス、近代建築という三層が一日に圧縮された日</strong>。</p>
     </div>
   </div>
 
@@ -1211,6 +1310,10 @@
     <div class="callout" style="margin-top: 16px;">
       <strong>メーデー対策</strong>
       ストがあると分かった場合、ザーンセ・スカンス（プランA）またはキューケンホフ（プランB）を<strong>1時間早めに切り上げて</strong>余裕を確保。ブリュッセル南→空港のSNCB国内線が止まった場合は<strong>タクシー（€30〜40、約20分）</strong>で代替。出発5日前（4/26頃）にSNCB公式（belgiantrain.be）で確認。
+    </div>
+    <div class="highlights-box">
+      <div class="heading">本日のみどころ</div>
+      <p>旅の最後を飾るのは、絵画ではなく<strong>「オランダらしい風景」</strong>そのもの。プランAなら<strong>ザーンセ・スカンス</strong>——18〜19世紀の風車群とチーズ工房、木靴職人の作業場が川沿いに並ぶ屋外博物館的な集落。Zaandam駅から徒歩圏という近さがありがたく、最終日にふさわしいゆったり感。<br><br>プランBなら<strong>キューケンホフ</strong>——世界最大のチューリップ公園で、5月1日はちょうど大型品種が満開ピークを迎える時期。32ヘクタールの敷地に700万球が咲き乱れる光景は他では見られません。スキポール起点の動線も帰国日に向いており、シャトルバスでそのまま空港へ戻れる効率性。<br><br>どちらを選んでも、絵画で描かれてきた「オランダの風景」を最後にもう一度味わってから空へ。8日間で辿った北方絵画の旅の、静かな結びとして。</p>
     </div>
   </div>
 </section>
@@ -1860,19 +1963,21 @@
   <table>
     <tr><th>いつ</th><th>何を予約</th><th>価格</th><th>URL/備考</th></tr>
     <tr><td>2026年5月末</td><td>Eurostar 4/26 ブリュッセル⇔パリ往復</td><td>€100〜160</td><td><a href="https://www.eurostar.com" target="_blank">eurostar.com</a></td></tr>
+    <tr><td><strong>2026年6月頃</strong></td><td><strong>Golden Tulip Leiden Centre 価格確認</strong>（検討中・Inntelとの差額次第で乗り換え判断）</td><td>€450〜600見込み</td><td><a href="https://goldentulipleidencentre.com" target="_blank">goldentulipleidencentre.com</a></td></tr>
     <tr><td><strong>2026年7月</strong></td><td><strong>ゴッホ美術館（最優先）</strong></td><td>€25/人</td><td><a href="https://tickets.vangoghmuseum.com" target="_blank">tickets.vangoghmuseum.com</a></td></tr>
     <tr><td>2026年9月</td><td>ルーブル美術館</td><td>€32/人</td><td><a href="https://ticket.louvre.fr" target="_blank">ticket.louvre.fr</a></td></tr>
     <tr><td>2026年9月</td><td>マウリッツハイス</td><td>€19.5/人</td><td><a href="https://www.mauritshuis.nl" target="_blank">mauritshuis.nl</a></td></tr>
     <tr><td>2026年9月</td><td>Depot Boijmans Van Beuningen（時間帯指定）</td><td>€20/人</td><td><a href="https://www.boijmans.nl/en/tickets" target="_blank">boijmans.nl</a></td></tr>
+    <tr><td>2026年9月</td><td>Renilde夕食を選ぶ場合: Depot＋Renildeコンビチケット（同サイト）</td><td>€57/人（飲み物別）</td><td><a href="https://www.boijmans.nl/en/tickets-depot-renilde-2" target="_blank">boijmans.nl/tickets-depot-renilde-2</a></td></tr>
+    <tr><td><strong>2026年10月中旬</strong></td><td><strong>キューケンホフ 5/1 チケット購入</strong>（プランBを選ぶ場合）公式サイトによると10月中旬発売開始。週末は即完売。<strong>4日前まで全額キャンセル可</strong>なので安心して押さえる</td><td>€21/人〜（コンビチケット€33〜）</td><td><a href="https://keukenhof.nl/en/" target="_blank">keukenhof.nl</a></td></tr>
     <tr><td>2026年12月</td><td>聖バーフ大聖堂（AR）</td><td>€16/人</td><td><a href="https://www.sintbaafskathedraal.be" target="_blank">sintbaafskathedraal.be</a></td></tr>
     <tr><td>2026年12月</td><td>ベルギー王立美術館＋マグリット</td><td>€20/人</td><td><a href="https://www.fine-arts-museum.be" target="_blank">fine-arts-museum.be</a></td></tr>
     <tr><td>2026年12月</td><td>KMSKA</td><td>€20/人</td><td><a href="https://www.kmska.be" target="_blank">kmska.be</a></td></tr>
     <tr><td><strong>2026年12月末</strong></td><td><strong>Eurocity Direct 4/28 アントワープ中央駅→スキポール</strong>（Flexプラン推奨）</td><td>€40〜/人</td><td><a href="https://www.nsinternational.com/en" target="_blank">nsinternational.com</a></td></tr>
     <tr><td><strong>2027年1〜2月</strong></td><td><strong>王宮温室の販売開始情報をウォッチ</strong></td><td>-</td><td><a href="https://www.koninklijke-serres-royales.be" target="_blank">koninklijke-serres-royales.be</a></td></tr>
     <tr><td>2027年2月</td><td>アムステルダム国立美術館</td><td>€25/人</td><td><a href="https://www.rijksmuseum.nl" target="_blank">rijksmuseum.nl</a></td></tr>
-    <tr><td><strong>2026年10月中旬</strong></td><td><strong>キューケンホフ 5/1 チケット購入</strong>（プランBを選ぶ場合）公式サイトによると10月中旬発売開始。週末は即完売。<strong>4日前まで全額キャンセル可</strong>なので安心して押さえる</td><td>€21/人〜（コンビチケット€33〜）</td><td><a href="https://keukenhof.nl/en/" target="_blank">keukenhof.nl</a></td></tr>
     <tr><td><strong>2027年3月販売開始日</strong></td><td><strong>王宮温室予約</strong>（3日で完売リスク）</td><td>€6前後</td><td>公式サイトから</td></tr>
-    <tr><td><strong>2027年3月</strong></td><td><strong>オルタ博物館予約</strong>（4/25日曜16:00枠、15分ごと15人制限）</td><td>€12/人</td><td><a href="https://www.hortamuseum.be" target="_blank">hortamuseum.be</a></td></tr>
+    <tr><td><strong>2027年3月</strong></td><td><strong>オルタ博物館予約</strong>（4/25日曜16:00枠、15分ごと15人制限）</td><td>€14/人</td><td><a href="https://www.hortamuseum.be" target="_blank">hortamuseum.be</a></td></tr>
   </table>
   <div class="callout">
     <strong>詐欺サイト注意</strong>

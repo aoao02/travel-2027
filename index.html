@@ -342,6 +342,43 @@
   .callout.gold strong { color: var(--gold-deep); }
   .callout.sage strong { color: var(--sage); }
 
+  /* 食コラム用スタイル */
+  .column-lede {
+    font-family: 'Cormorant Garamond', 'Shippori Mincho', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .column-body p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.4rem;
+    line-height: 0.8;
+    float: left;
+    margin: 8px 12px 0 0;
+    color: var(--gold-deep);
+    font-weight: 600;
+  }
+
+  .pull-quote {
+    font-family: 'Cormorant Garamond', 'Shippori Mincho', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--gold-deep);
+    text-align: center;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 80%;
+    padding: 0 20px;
+  }
+
+  .pull-quote::before { content: "❝ "; color: var(--line); }
+  .pull-quote::after { content: " ❞"; color: var(--line); }
+
   /* 「みどころ」「このプランの特徴」用の上品スタイル */
   .highlights-box {
     margin: 28px 0 0;
@@ -820,10 +857,11 @@
     <li><a href="#museums">VII. 美術館予約タイムライン</a></li>
     <li><a href="#trains">VIII. 列車手配</a></li>
     <li><a href="#budget">IX. 予算サマリー</a></li>
-    <li><a href="#dining">X. 食事スポット</a></li>
-    <li><a href="#souvenirs">XI. お土産戦略</a></li>
-    <li><a href="#notes">XII. 重要な注意事項</a></li>
-    <li><a href="#checklist">XIII. 出発前チェックリスト</a></li>
+    <li><a href="#food-column">X. 食をめぐる物語</a></li>
+    <li><a href="#dining">XI. 食事スポット</a></li>
+    <li><a href="#souvenirs">XII. お土産戦略</a></li>
+    <li><a href="#notes">XIII. 重要な注意事項</a></li>
+    <li><a href="#checklist">XIV. 出発前チェックリスト</a></li>
   </ul>
 </nav>
 
@@ -855,6 +893,9 @@
       <div>特徴: ルーフトップバー（グランプラス眺望）、サウナ・フィットネス</div>
     </div>
   </div>
+  <div class="callout" style="margin-top: 12px;">
+    <strong>💡 部屋リクエストのコツ（ブリュッセル4泊）</strong>
+    歴史ある建物のため部屋ごとに形・広さに差があり、重厚な内装で平米のわりに狭く感じる声も。道路向かいの騒音の指摘も複数。<strong>予約後に「静かな中庭側・できれば改装済み・少しゆとりのある部屋」をメール（または予約サイトのSpecial requests欄）で事前リクエスト</strong>しておくと割り当て段階で考慮されやすい（当日より事前が有効）。リクエストは確約ではなく在庫次第だが、4泊・連泊は優先されやすい。チェックインは15時前後が選択肢が多い。設備の経年劣化（バス回りの建付け等）の声もあるので、気になる点は遠慮なくフロントへ。
   <div class="candidate first">
     <div class="candidate-label">ZAANDAM — 3 NIGHTS · 本命確定</div>
     <div class="candidate-name">Zaandamのホテル ✅ 予約済み（キャンセル無料）</div>
@@ -897,7 +938,7 @@
     <tr><td><a href="#day-427">4/27</a></td><td>火</td><td><a href="#city-brussels">ブリュッセル</a></td><td>朝<a href="#spot-serres">王宮温室</a>→<a href="#city-ghent">ゲント</a>日帰り（<a href="#spot-baafs">神秘の子羊</a>）</td></tr>
     <tr><td><a href="#day-428">4/28</a></td><td>水</td><td><a href="#city-amsterdam">Zaandam</a></td><td><a href="#city-antwerp">アントワープ</a>観光→スキポール→Zaandam移動</td></tr>
     <tr><td><a href="#day-429">4/29</a></td><td>木</td><td><a href="#city-amsterdam">Zaandam</a></td><td>ゴッホ美術館・国立美術館</td></tr>
-    <tr><td><a href="#day-430">4/30</a></td><td>金</td><td><a href="#city-amsterdam">Zaandam</a></td><td><a href="#city-hague">ハーグ</a>・<a href="#city-delft">デルフト</a>・<a href="#city-rotterdam">ロッテルダム</a>（Depot）日帰り</td></tr>
+    <tr><td><a href="#day-430">4/30</a></td><td>金</td><td><a href="#city-amsterdam">Zaandam</a></td><td><a href="#city-hague">マウリッツハイス</a>＋午後はDepot（A）またはキンデルダイク風車（B）※2月選択</td></tr>
     <tr><td><a href="#day-501">5/1</a></td><td>土</td><td>機中泊</td><td>プランA: <a href="#spot-zaanse">ザーンセ・スカンス</a> / プランB: キューケンホフ → 帰国</td></tr>
   </table>
 
@@ -906,7 +947,7 @@
     <ul>
       <li><strong>北方絵画史を地理的に辿る一筆書き</strong> — ブリューゲルとボッシュ（ブリュッセル）→ ルーベンス（アントワープ）→ ファン・エイク兄弟「神秘の子羊」（ゲント）→ ルーブルのフランドル絵画（パリ）→ レンブラントとフェルメール（アムステルダム・ハーグ）。15世紀北方ルネサンスから17世紀オランダ黄金時代まで、絵画史を旅程そのもので辿る構成。</li>
       <li><strong>2拠点滞在で荷物移動は1回だけ</strong> — ブリュッセル4泊・Zaandam（またはライデン）3泊。スーツケースを動かすのは4/28の1回のみで、日帰り旅の機動性を最大化。日帰り先はパリ、ゲント、アントワープ、ハーグ・デルフト・ロッテルダムの4方向。</li>
-      <li><strong>大美術館と街歩きの交互配置</strong> — 王立美術館（4/25）→ ルーブル（4/26）→ ゲント街歩き（4/27）→ KMSKA（4/28）→ 国立美術館・ゴッホ（4/29）→ マウリッツハイス＋3都市散策（4/30）。集中と発散を交互に挟み、疲労が偏らない設計。</li>
+      <li><strong>大美術館と街歩きの交互配置</strong> — 王立美術館（4/25）→ ルーブル（4/26）→ ゲント街歩き（4/27）→ KMSKA（4/28）→ 国立美術館・ゴッホ（4/29）→ マウリッツハイス＋Depot（4/30）。集中と発散を交互に挟み、疲労が偏らない設計。</li>
       <li><strong>建築と絵画を同時に楽しむ</strong> — オルタ邸（アール・ヌーヴォー発祥）、ブリュッセル王宮温室（19世紀ガラス建築）、Depot Boijmans（鏡張りの巨大球体）など、絵画以外の見どころを各都市に配置。</li>
       <li><strong>GW後半メーデー対策込み</strong> — 5/1のベルギー側ストライキリスクを想定し、プランA（ザーンセ）・プランB（キューケンホフ）の両プランを用意。前日までスト情報を確認して柔軟に判断できる構成。</li>
     </ul>
@@ -1086,7 +1127,7 @@
       ・代替: SNCB国内線で中央駅→南駅（€2-3/人、約5分＋徒歩）</div></div>
       <div class="row"><div class="time">06:40頃</div><div class="activity">ブリュッセル南駅コンコース着、<strong>駅構内のPanos/Délifranceでパン＆コーヒー調達</strong>（Eurostarターミナル内はカフェなし・自販機のみ）</div></div>
       <div class="row"><div class="time">07:00</div><div class="activity">Eurostarターミナル チェックイン開始、セキュリティ・パスポートコントロール通過</div></div>
-      <div class="row"><div class="time">07:43</div><div class="activity"><strong>Eurostar発（Standard €35最安帯、+€30でPlus）</strong>、車内で朝食</div></div>
+      <div class="row"><div class="time">07:43</div><div class="activity"><strong>Eurostar発（Standardクラス）</strong>、車内で朝食</div></div>
       <div class="row"><div class="time">09:05</div><div class="activity">パリ北駅着、メトロでルーブルへ</div></div>
       <div class="row"><div class="time">09:30–11:00</div><div class="activity"><span class="highlight"><a href="#spot-louvre">ルーブル ドゥノン翼1F</a></span>：サモトラケのニケ、ミロのヴィーナス、古代彫刻</div></div>
       <div class="row"><div class="time">11:00–13:00</div><div class="activity"><span class="highlight">シュリー翼</span>：古代エジプト、メソポタミア、ヴィーナスの中庭</div></div>
@@ -1095,9 +1136,9 @@
       <div class="row"><div class="time">16:00–17:30</div><div class="activity"><span class="highlight">★ ドゥノン翼2F</span>：<strong>モナリザ（閉館前で混雑落ち着く）</strong>、大画廊、ヴェロネーゼ「カナの婚礼」、ダヴィッド、ドラクロワ</div></div>
       <div class="row"><div class="time">17:30</div><div class="activity">退館誘導開始、ピラミッド広場へ</div></div>
       <div class="row"><div class="time">18:15</div><div class="activity">パリ北駅到着（メトロ4号線・約25分）</div></div>
-      <div class="row"><div class="time">18:15–19:30</div><div class="activity">北駅周辺で<span class="highlight">ゆったり夕食</span>（約1時間15分）</div></div>
+      <div class="row"><div class="time">18:15–19:30</div><div class="activity">北駅周辺で<span class="highlight">ゆったり夕食</span>（約1時間15分）→ 第一候補 Bouillon Chartier 東駅店</div></div>
       <div class="row"><div class="time">19:50</div><div class="activity">Eurostarターミナル チェックイン（30分以上前で安全）</div></div>
-      <div class="row"><div class="time">20:22</div><div class="activity"><strong>Eurostar発（Standard €35最安帯）</strong>※暫定値</div></div>
+      <div class="row"><div class="time">20:22</div><div class="activity"><strong>Eurostar発（Standardクラス）</strong></div></div>
       <div class="row"><div class="time">21:46</div><div class="activity"><strong>ブリュッセル南駅着 → ホテルへ</strong><br>
       ・推奨: <strong>Uber</strong>（駅前ピックアップ、€10-15/車・約8分）<br>
       ・代替: SNCB国内線で南駅→中央駅（€2-3/人、約5分＋徒歩）</div></div>
@@ -1106,6 +1147,31 @@
     <div class="callout sage" style="margin-top: 20px;">
       <strong>モナリザを最後に回す理由</strong>
       ルーブル月曜の開館は9:00、閉館は18:00（最終入場17:30、退館誘導は17:30〜）。<strong>モナリザ前の混雑は開館直後から急速に膨らみ、午前10〜午後3時がピーク</strong>。多くの観光客は午前中にハイライトを済ませて午後はカフェやセーヌ散策に向かうため、<strong>16:00以降は団体ツアーが引けて静かになる</strong>のが定石です。閉館30分前の17:30頃には部屋の退去誘導が始まるので、16:00入場 → 17:30退館誘導開始の90分でドゥノン翼2Fを巡るのがちょうど良いペース。ニケ・ミロのヴィーナス・ヴィーナスの中庭などは午前中のほうが自然光も美しく、双方で最適化されます。
+    </div>
+    <div class="callout gold" style="margin-top: 16px;">
+      <strong>🍽️ パリの夕食 — 北駅・東駅周辺</strong>
+      ルーブル退館（17:30）から復路Eurostarのチェックインまで、夕食に使えるのは正味75分前後。提供の速さと立地で2軒に絞りました。<br><br>
+
+      <strong>第一候補: Bouillon Chartier 東駅店</strong><br>
+      パリの老舗ボイヨン（庶民的ブラッスリー）の東駅店。前菜€1〜・主菜€7前後と最安クラスで、評価も高い。<strong>月曜も昼から深夜まで通し営業</strong>。東駅正面で、北駅からメトロ4号線で一駅、または徒歩約10分。本店（1896年創業のグラン・ブルヴァール店）は雰囲気随一だが行列必至で動線も外れるため、行列の少ないこの東駅店を選択。<strong>予約不可だが料理提供が速い</strong>ので、限られた夕食時間に向く。<br><br>
+
+      <strong>駅至近の確実な代替: Terminus Nord</strong><br>
+      北駅の真向かいの老舗ブラッスリー。<strong>店内に列車の発着案内モニターがあり、Eurostarの時刻を確認しながら食事できる</strong>のが何より安心。価格は東駅店より上がるが、駅至近で最も確実。<br><br>
+
+      <strong>小さなビストロを味わうなら: Le Catrina</strong><br>
+      自ら bar/bistro を名乗る街角の小さなビストロ。北駅から徒歩数分、東駅との中間あたり。<strong>毎日朝から深夜まで通し営業</strong>。鴨のコンフィやアンガーステーキなど定番のフランス家庭料理が評判で、ベルギービールの品揃えも良い。ボイヨン（大箱・激安）、ブラッスリー（格と駅至近）に対して、<strong>家庭的で温かい街角ビストロ</strong>という三つ目の方向性。「ビストロらしさ」を味わいたい日に。小規模店なので、夕食時は満席で待つ可能性がある点だけ留意を。<br><br>
+
+      <strong>軽く済ませたい日の保険</strong>: 東駅前の <strong>The Place to...</strong>（サラダ・軽食・ベジ対応）、北駅至近の <strong>IT Italian Trattoria</strong>（フレンチ気分でない日のパスタ・ピザ、22時閉店）など。北駅から少し歩く <strong>Brasserie Bellanger</strong> は高評価だが要予約・満席になりやすく、この日のタイトな枠には不向き。
+    </div>
+    <div class="callout" style="margin-top: 16px;">
+      <strong>🔐 北駅周辺の治安メモ</strong>
+      北駅・東駅のあるパリ10区は、スリや客引きが比較的多いエリアとされます。ただし過度な心配は不要——狙われやすいのは「単独・大荷物・深夜・ぼんやり歩く」旅行者で、今回は<strong>二人・手荷物のみ・20時前・駅の南/東側</strong>と好条件が揃っています。<br><br>
+      ・<strong>避けたいのは北〜北西側</strong>（Barbès、Château Rouge、La Chapelle方面）。今回の夕食候補はいずれも<strong>駅の南〜東側</strong>で逆方向、現地在住者も「南側ルートは比較的安全」と評価<br>
+      ・<strong>対策は基本の徹底でOK</strong>: 鞄は体の前で斜めがけ、スマホは出さない（出すなら一人が周囲に注意する二人体制）。メトロ4・5号線の混雑時は特に注意<br>
+      ・路上・駅構内の「署名活動」「ミサンガ売り」「両替」「切符の買い方を教える」などの声かけは<strong>立ち止まらず無視</strong>。これは北駅に限らずルーブルやモンマルトルでも同じ（むしろ観光名所のほうが密度が高い）<br>
+      ・<strong>駅構内こそ要注意</strong>: 路上より「立ち止まって何かに集中している瞬間」が狙われます。とくに①Eurostarのチェックイン待ち・セキュリティ通過の列（前後が密着）②券売機・案内表示の前でスマホや財布を出す瞬間③メトロ/RERからホームへの移動中。<strong>券売機やスマホ操作のときこそ二人体制で一人が周囲を見る</strong><br>
+      ・<strong>置き引き対策</strong>: 荷物は足元や椅子の背もたれに置かない。バッグは常に体に接触させ、混雑に紛れて足元・背後から抜かれる手口に注意<br>
+      ・食事後はあまり遠回りせず、ターミナルへまっすぐ戻る動線にしておくと安心
     </div>
     <div class="callout" style="margin-top: 16px;">
       <strong>☕ 朝のパン＆コーヒー調達 — 4パターン</strong>
@@ -1134,7 +1200,7 @@
       前日に何も用意できなかった場合、Eurostarターミナル内のCosta自販機で€2-3のコーヒーだけ。簡単なサンドイッチキオスクもあり。<br><br>
 
       <strong>⑤ 車内カフェパターン（乗車後ゆっくり）</strong><br>
-      この便（旧Thalys系車両）には<strong>Café Eurostar（バー・ビュッフェ車両）</strong>があり、今回の座席Coach 6/7はそのすぐ近く。乗車後、温かいコーヒー・紅茶・軽食・サンドイッチ・ベルギービール/ワインなどを購入できる。乗車前に焦って買う必要なし。ただし朝のピーク時は混雑する可能性あり。<br><br>
+      この便（旧Thalys系車両）には<strong>Café Eurostar（バー・ビュッフェ車両）</strong>があり、座席によっては近い場合も。乗車後、温かいコーヒー・紅茶・軽食・サンドイッチ・ベルギービール/ワインなどを購入できる。乗車前に焦って買う必要なし。ただし朝のピーク時は混雑する可能性あり。<br><br>
 
       <strong>💡 コスパ最強は①②</strong>: 前日にベルギーの美味しいパン（Wittamer等）を買っておき、ホテル（①）か車内（②）で食べるのが一番お得。車内カフェ（⑤）はコーヒーだけ買い足す、という合わせ技も◎。<br><br>
 
@@ -1142,7 +1208,7 @@
     </div>
     <div class="callout gold" style="margin-top: 16px;">
       <strong>✅ EUROSTAR予約済み</strong>
-      <strong>往路07:43便・復路20:22便ともStandard €35（最安帯）・往復2人で€140</strong>で確保済み。座席はCoach 6/7のペア席が自動割り当て（大陸路線のStandardは座席変更不可、Plusにすると変更可能だが1h22mの短距離では€60差の恩恵薄く、Standardで十分）。復路20:22便はルーブル17:30退館後、北駅で1時間以上の夕食時間を確保できるため選択。
+      <strong>往路07:43便・復路20:22便ともStandardクラスで確保済み</strong>。座席はペア席が自動割り当て（大陸路線のStandardは座席変更不可、Plusにすると変更可能だが1h22mの短距離では恩恵薄く、Standardで十分）。復路20:22便はルーブル17:30退館後、北駅で1時間以上の夕食時間を確保できるため選択。
     </div>
   </div>
 
@@ -1206,7 +1272,7 @@
       <p>移動日でありながら<strong>「ルーベンスの街」アントワープ</strong>を一日かけて巡る贅沢な日。テーマは「美術館の絵」と「教会の絵」の比較。<br><br>
       朝一の<strong>KMSKA（王立美術館）</strong>は2022年に大改装を終え、ファン・エイク、ルーベンス、メムリンク、アンソールに加え、現代美術まで網羅。前日ゲントで観た「神秘の子羊」のファン・エイクが、ここでは「井戸の聖母」など別の傑作で再登場します。<br><br>
       午後は街の中心へ戻り、<strong>聖母大聖堂</strong>でルーベンスの<strong>三連祭壇画「キリストの昇架」「キリストの降架」</strong>と対面。ルーベンスが本来祈りの場として描いた本来の位置に掛かっている圧倒的な空間。<br><br>
-      旅の締めくくりは閉館前の<strong>聖パウロ教会</strong>。ルーベンス・ファン・ダイク・ヨルダーンスというアントワープの三大バロック画家の作品が<strong>原位置に揃う世界唯一の教会</strong>。「キリストの鞭打ち」をはじめ50以上の絵画、200を超える彫像、外には60体超の彫刻が並ぶカルバリ庭園——絵画・彫刻・建築が渾然一体となった圧倒的な空間で、アントワープでの一日を締めくくります。</p>
+      もし体力と時間に余裕があれば、締めくくりに<strong>聖パウロ教会</strong>へ。ルーベンス・ファン・ダイク・ヨルダーンスというアントワープの三大バロック画家の作品が<strong>原位置に揃う世界唯一の教会</strong>で、「キリストの鞭打ち」をはじめ50以上の絵画、200を超える彫像、外には60体超の彫刻が並ぶカルバリ庭園が見もの。ただしこの日は荷物を持っての移動日なので、<strong>聖パウロは無理せず「行ければ嬉しい一か所」</strong>という位置づけに。ルーベンスは聖母大聖堂とKMSKAで十分堪能できるので、疲れていれば省いて夕方をゆったり過ごすのが正解です。</p>
     </div>
     <div class="timetable">
       <div class="row"><div class="time">08:30</div><div class="activity">ブリュッセルのホテルをチェックアウト、スーツケースを持って中央駅へ（ホテルから徒歩3分）</div></div>
@@ -1216,9 +1282,10 @@
       <div class="row"><div class="time">10:20–13:00</div><div class="activity"><span class="highlight"><a href="#spot-kmska">★ KMSKA</a></span>：ファン・エイク、ルーベンス、メムリンク、アンソール（2時間40分・開館直後の静かな時間）</div></div>
       <div class="row"><div class="time">13:00–14:00</div><div class="activity">ランチ＋聖母大聖堂へ移動（KMSKAから徒歩15分 or トラム10分でグローテマルクト周辺）</div></div>
       <div class="row"><div class="time">14:00–15:30</div><div class="activity"><span class="highlight"><a href="#spot-cathedral-antwerp">聖母大聖堂</a></span>：ルーベンス三連祭壇画「キリストの昇架」「キリストの降架」（1時間半）</div></div>
-      <div class="row"><div class="time">15:30–16:00</div><div class="activity">グローテマルクト散策・聖パウロ教会へ徒歩移動（約10分）</div></div>
-      <div class="row"><div class="time">16:00–17:00</div><div class="activity"><span class="highlight"><a href="#spot-oldtown">聖パウロ教会</a></span>：ルーベンス「キリストの鞭打ち」、ファン・ダイク、彫刻群、カルバリ庭園（1時間・閉館まで）</div></div>
-      <div class="row"><div class="time">17:00–17:25</div><div class="activity">アントワープ中央駅へ徒歩戻り（約25分）またはトラム</div></div>
+      <div class="row"><div class="time">15:30〜</div><div class="activity"><strong>ここで体力と時間を見て判断</strong>（聖パウロへ行くか、早めに駅へ戻るか）</div></div>
+      <div class="row"><div class="time">（任意）15:30–16:00</div><div class="activity">グローテマルクト散策・聖パウロ教会へ徒歩移動（約10分）</div></div>
+      <div class="row"><div class="time">（任意）16:00–17:00</div><div class="activity"><span class="highlight"><a href="#spot-oldtown">聖パウロ教会</a></span>：ルーベンス「キリストの鞭打ち」、ファン・ダイク、彫刻群、カルバリ庭園（1時間・閉館まで）※行く場合</div></div>
+      <div class="row"><div class="time">17:00–17:25</div><div class="activity">アントワープ中央駅へ徒歩戻り（約25分）またはトラム ※聖パウロを省く場合は早めに駅へ戻ってもよい</div></div>
       <div class="row"><div class="time">17:25–18:30</div><div class="activity">ロッカー回収、駅構内で夕食または軽食（駅構内のCarrefour Expressやベーカリーで調達も可）</div></div>
       <div class="row"><div class="time">18:37</div><div class="activity"><span class="highlight">アントワープ中央駅発 → EuroCity Direct（ECD 9567）→ スキポール空港</span>（毎時xx:37発・1時間11分）</div></div>
       <div class="row"><div class="time">19:48</div><div class="activity">スキポール空港着 → Zaandam行き直通（約20分）</div></div>
@@ -1247,8 +1314,8 @@
       アントワープ中央駅のSNCB公式コインロッカーは構内のツーリストインフォメーション近く。サイズ複数あり、日帰り€5〜10程度。事前オンライン予約（belgiantrain.be）または現地ターミナルで当日利用可。
     </div>
     <div class="callout gold" style="margin-top: 16px;">
-      <strong>3スポット巡る順番の戦略</strong>
-      KMSKA（17:00閉館）→聖母大聖堂（17:00閉館）→聖パウロ教会（14:00開館・17:00閉館）の<strong>全てが17:00閉館</strong>のため、開館順に逆算する必要あり。<strong>KMSKAを朝一に持ってきて2時間20分しっかり確保</strong>、ランチを挟んで聖母大聖堂、最後に14:00開館の聖パウロ教会を閉館16:00-17:00で1時間。聖パウロ教会は<strong>ルーベンス・ファン・ダイク・ヨルダーンスの3大バロック画家の作品が原位置に揃う世界唯一の教会</strong>、加えて200の彫像とカルバリ庭園の60体超の彫刻も見どころ満載、駆け足では惜しい。
+      <strong>巡る順番の戦略（聖パウロは任意）</strong>
+      KMSKA（17:00閉館）→聖母大聖堂（17:00閉館）→聖パウロ教会（14:00開館・17:00閉館）と<strong>全てが17:00閉館</strong>のため、開館順に逆算。<strong>KMSKAを朝一に持ってきて2時間40分しっかり確保</strong>、ランチを挟んで聖母大聖堂、そして余裕があれば14:00開館の聖パウロを閉館前の1時間で。<strong>聖パウロは荷物を持っての移動日ゆえ「行ければ嬉しい一か所」</strong>の扱い——聖母大聖堂を出た15:30時点の体力と時間で判断を。ルーベンス・ファン・ダイク・ヨルダーンスの作品が原位置に揃う世界唯一の教会で行く価値は大きいが、省いてもルーベンスは聖母大聖堂＋KMSKAで十分堪能できる。<strong>KMSKAで時間が押した場合も聖パウロを諦めて17:37発で前倒し</strong>でき、Zaandam早着で夕食をゆっくりできる。
     </div>
     <div class="callout sage" style="margin-top: 16px;">
       <strong>⚠️ 聖パウロ教会の工事状況に注意</strong>
@@ -1290,38 +1357,78 @@
 
   <div class="day-card">
     <div id="day-430" class="day-date">DAY 7 · APRIL 30 · FRIDAY</div>
-    <h3>ハーグ・デルフト・ロッテルダム日帰り</h3>
+    <h3>ハーグ＋もう一か所（2案を2月に選択）</h3>
     <div class="highlights-box">
       <div class="heading">本日のみどころ</div>
-      <p>三都市を巡る一日。<strong>ハーグ・マウリッツハイス</strong>では、フェルメール「真珠の耳飾りの少女」と「デルフトの眺望」、レンブラント「テュルプ博士の解剖学講義」が同じ屋根の下に揃う贅沢な空間。とくに「デルフトの眺望」は、このあと訪れるデルフトの実景と照らし合わせる前段階として大切な体験になります。<br><br>続く<strong>デルフト</strong>では、フェルメールが生まれ、暮らし、埋葬された街そのものを歩きます。新教会、市場広場、運河沿いの街並みは、絵画から抜け出たような時間が止まった風景。<br><br>最後の<strong>ロッテルダム・Depot Boijmans Van Beuningen</strong>では一転して21世紀の建築体験へ。MVRDV設計の<strong>鏡張りの巨大球体</strong>は2021年開館、世界初の公開型収蔵庫。15万点超の収蔵品が見学可能なオープン構造で、屋上には白樺75本の庭園とロッテルダムを一望するパノラマが広がります。<strong>フェルメール、北方ルネサンス、近代建築という三層が一日に圧縮された日</strong>。</p>
+      <p><strong>ハーグ・マウリッツハイス</strong>は両案共通の確定。フェルメール「真珠の耳飾りの少女」と「デルフトの眺望」、レンブラント「テュルプ博士の解剖学講義」が同じ屋根の下に揃う贅沢な空間。とくに「デルフトの眺望」は、フェルメールゆかりの地を思い描きながら味わいたい一枚。<br><br>午後の過ごし方は2案を併記し、<strong>その時の気分・体力で選べる</strong>ようにしています。<strong>🎨 Depot案</strong>は、一転して<strong>ロッテルダム・Depot Boijmans Van Beuningen</strong>で21世紀の建築体験へ——MVRDV設計の鏡張りの巨大球体（2021年開館、世界初の公開型収蔵庫）で美術・建築の余韻に浸って締めるコース。<strong>🌬️ 風車案</strong>は趣向を変えて、世界遺産<strong>キンデルダイクの風車</strong>へ。19基の風車が運河沿いに並ぶオランダの原風景を、屋外でのんびり歩くコースです。旅全体が美術館に寄っているので、風車案は良いリズムの変化になります。<br><br><span style="font-size:0.85rem; color:var(--grey-soft);">※ Day8の「プランA/B（ザーンセ／キューケンホフ）」とは別の選択です。混同を避けるため、Day7のこの2案は「Depot案」「風車案」と呼びます。</span></p>
+    </div>
+
+    <div class="callout gold" style="margin-top: 20px;">
+      <strong>🎨 Depot案: マウリッツハイス →（デルフト任意）→ Depot Boijmans</strong>
+      美術・建築で一日を締めるコース。デルフトの街歩きは体力次第の任意立ち寄り（無料・予約不要、当日判断でOK）。
     </div>
     <div class="timetable">
       <div class="row"><div class="time">08:30</div><div class="activity">ホテル発、身軽に出発</div></div>
-      <div class="row"><div class="time">08:42頃</div><div class="activity"><strong>Zaandam駅発</strong></div></div>
-      <div class="row"><div class="time">08:54頃</div><div class="activity">アムス中央駅着、乗り換え → ハーグHS行き</div></div>
+      <div class="row"><div class="time">08:42頃</div><div class="activity"><strong>Zaandam駅発</strong> → アムス中央乗換 → ハーグHS</div></div>
       <div class="row"><div class="time">09:50</div><div class="activity">ハーグHS駅着</div></div>
-      <div class="row"><div class="time">10:00–12:00</div><div class="activity"><span class="highlight"><a href="#spot-mauritshuis">マウリッツハイス美術館</a></span>：「真珠の耳飾りの少女」「デルフトの眺望」（2時間）</div></div>
-      <div class="row"><div class="time">12:00–12:45</div><div class="activity">マウリッツハイス周辺でランチ（軽め）</div></div>
-      <div class="row"><div class="time">13:00</div><div class="activity">ハーグ→デルフト（列車約15分）</div></div>
-      <div class="row"><div class="time">13:15–14:15</div><div class="activity"><span class="highlight"><a href="#spot-delft">デルフト街歩き</a></span>：新教会、市場広場、街並み（1時間）</div></div>
-      <div class="row"><div class="time">14:30</div><div class="activity">デルフト→ロッテルダム中央駅（列車約15分）</div></div>
-      <div class="row"><div class="time">14:45</div><div class="activity">ロッテルダム中央駅→Museumpark（メトロ/トラム約10分）</div></div>
-      <div class="row"><div class="time">14:55–16:25</div><div class="activity"><span class="highlight">★ Depot Boijmans Van Beuningen</span>（1時間半）</div></div>
-      <div class="row"><div class="time">16:30–17:00</div><div class="activity"><span class="highlight">Renilde（屋上6F）</span>：コーヒー＆夕暮れのロッテルダム眺望</div></div>
+      <div class="row"><div class="time">10:00–12:15</div><div class="activity"><span class="highlight"><a href="#spot-mauritshuis">マウリッツハイス美術館</a></span>：「真珠の耳飾りの少女」「デルフトの眺望」（ゆっくり2時間強）</div></div>
+      <div class="row"><div class="time">12:15–13:00</div><div class="activity">マウリッツハイス周辺でランチ</div></div>
+      <div class="row"><div class="time">13:00頃</div><div class="activity">ハーグ→ロッテルダム中央駅（直通約30分弱）<br><span style="font-size:0.85rem; color:var(--grey-soft);">※デルフトに寄る場合はハーグ→デルフト（約15分）で途中下車、街歩き後にデルフト→ロッテルダム（約15分）</span></div></div>
+      <div class="row"><div class="time">13:40頃</div><div class="activity">ロッテルダム中央駅→Museumpark（メトロ/トラム約10分）</div></div>
+      <div class="row"><div class="time">14:15–17:00</div><div class="activity"><span class="highlight">★ Depot Boijmans Van Beuningen</span>（入場枠14:15・閉館17:00まで滞在可）</div></div>
+      <div class="row"><div class="time">～17:00</div><div class="activity"><span class="highlight">Renilde（屋上6F）</span>：コーヒー＆夕暮れのロッテルダム眺望（締めに）</div></div>
       <div class="row"><div class="time">17:10</div><div class="activity">ロッテルダム中央駅→Zaandam（直通約1時間）</div></div>
       <div class="row"><div class="time">18:10頃</div><div class="activity">Zaandam着、夕食</div></div>
     </div>
+
+    <div class="callout sage" style="margin-top: 24px;">
+      <strong>🌬️ 風車案: マウリッツハイス → キンデルダイク（風車）</strong>
+      デルフト・Depotには寄らず、午後はキンデルダイクの風車風景に集中。屋外でのんびりする一日。
+    </div>
+    <div class="timetable">
+      <div class="row"><div class="time">08:30</div><div class="activity">ホテル発、身軽に出発</div></div>
+      <div class="row"><div class="time">08:42頃</div><div class="activity"><strong>Zaandam駅発</strong> → アムス中央乗換 → ハーグHS</div></div>
+      <div class="row"><div class="time">09:50</div><div class="activity">ハーグHS駅着</div></div>
+      <div class="row"><div class="time">10:00–12:30</div><div class="activity"><span class="highlight"><a href="#spot-mauritshuis">マウリッツハイス美術館</a></span>：「真珠の耳飾りの少女」「デルフトの眺望」（ゆっくり）</div></div>
+      <div class="row"><div class="time">12:30–13:00</div><div class="activity">軽めにランチ → ハーグ→ロッテルダム中央駅（直通約30分弱）</div></div>
+      <div class="row"><div class="time">13:30頃</div><div class="activity">ロッテルダム中央駅→Erasmusbrug（エラスムス橋）のWaterShuttle乗り場へ（トラム/メトロ約10分）</div></div>
+      <div class="row"><div class="time">13:30〜14:00台</div><div class="activity"><span class="highlight">WaterShuttle</span>でロッテルダム→キンデルダイク（直通約30分・1〜2時間おき）</div></div>
+      <div class="row"><div class="time">14:00〜16:30</div><div class="activity"><span class="highlight">★ キンデルダイク</span>：19基の風車が並ぶ水辺の散策（世界遺産）。<strong>疲労度に応じて「全部歩かず、見晴らしのよい一角まででのんびり」でOK</strong></div></div>
+      <div class="row"><div class="time">16時台</div><div class="activity">WaterShuttleでロッテルダムへ戻り</div></div>
+      <div class="row"><div class="time">17時台</div><div class="activity">ロッテルダム中央駅→Zaandam（直通約1時間）</div></div>
+      <div class="row"><div class="time">18時台</div><div class="activity">Zaandam着、夕食</div></div>
+    </div>
+
+    <div class="callout sage" style="margin-top: 20px;">
+      <strong>キンデルダイクのコツ（プランB選択時）</strong>
+      ロッテルダム東約15km、世界遺産の風車群。乗り場は<strong>Erasmusbrug（エラスムス橋）付近</strong>。<strong>WaterShuttleは2027/3/23〜10/5は週7日運航</strong>（4/30は運航日・曜日の心配なし）、直通30分でMolenkade着。始発は朝9時頃・キンデルダイクからの最終帰着は17時頃。開館9:00–17:30、入場料 平日€18・週末祝日€19.50/人、<strong>往復シャトル＋入場のコンビチケット€30〜35/人</strong>が便利。<br><br>
+      <strong>無理しない歩き方</strong>: 風車エリアは公共の遊歩道で広いが、入口（ビジターセンター）周辺と最初の数基だけでも十分に絵になる。疲れていれば奥まで行かず、見晴らしのよい一角のベンチでのんびり眺めるだけでも満足度は高い。ボートツアー（入場券に含む）に乗れば歩かず水上から風車を見ることもできる。<br><br>
+      <strong>予約</strong>: GWで混む可能性あり。<strong>Depot案/風車案の判断（2027年2月頃）で風車案に決めたら、コンビチケットを事前予約</strong>（kinderdijk.com または watershuttle.nl のwebshop）。時間枠の席が確保でき安心。
+    </div>
+
+    <div class="callout" style="margin-top: 16px;">
+      <strong>💡 風車以外の「気分転換」候補（午後の代替案）</strong>
+      キンデルダイクの風車が定番だが、午後を別の風景・街並みに充てる選択肢も。いずれもマウリッツハイス（ハーグ）の後に組める。所要はハーグ起点の片道目安。<br><br>
+      ・<strong>ハウダ（Gouda）／直通約17〜27分</strong>: チーズで有名な歴史都市。15世紀のステンドグラスで名高い聖ヤンス教会、ゴシックの市庁舎が建つ美しい市場広場。コンパクトで半日にちょうどよく、食コラムのチーズ市の街とも響き合う<br>
+      ・<strong>ドルドレヒト（Dordrecht）／直通約38〜52分</strong>: オランダ最古級の都市。運河・古い商家・港の歴史が残る落ち着いた街で、<strong>観光客が少なく静かに楽しめる穴場</strong>。近郊にビースボス国立公園（水郷の自然）も<br>
+      ・<strong>ロッテルダム街歩き（現代建築）／直通約30分弱</strong>: Depotに入らずとも、エラスムス橋・キューブハウス・マルクトハル・ユーロマストなど大胆な現代建築の宝庫。古典絵画→現代建築の対比で気分転換。歩くだけ・無料中心<br>
+      ・<strong>ハーグ完結＋スヘフェニンゲン／トラム約15分</strong>: 移動最小で体力的に最も楽。政庁地区の池畔を散策し、トラムで北海のビーチへ。海の風景でリフレッシュ<br>
+      ・<strong>ハールレム（Haarlem）／直通約32〜39分</strong>: 中世の旧市街が美しく、黄金時代以前の教会・市庁舎が並ぶ。アムスの喧騒を避けた上質な街歩き<br><br>
+      ※「風景としてのインパクト」ならキンデルダイクが頭ひとつ抜ける。「人混みを避けて静かに」ならドルドレヒトが穴場。
+    </div>
+
     <div class="callout gold" style="margin-top: 20px;">
-      <strong>Depot Boijmans Van Beuningen — ガイド情報</strong>
-      世界初の公開型収蔵庫、155,000点以上の作品が保管。<strong>チケットは時間帯指定のオンライン事前予約必須</strong>（boijmans.nl、€20/人）。<br><br>
+      <strong>Depot Boijmans Van Beuningen — ガイド情報（プランA選択時）</strong>
+      世界初の公開型収蔵庫、155,000点以上の作品が保管。<strong>チケットは時間帯指定のオンライン事前予約必須</strong>（boijmans.nl、€20/人）。<strong>開館は火〜日11:00–17:00</strong>。入場枠の開始時刻に間に合えば、あとは閉館まで好きなだけ滞在可。<strong>14:15枠を取れば閉館17:00まで実質2時間半</strong>、一日の締めにちょうどよい時間帯。<br><br>
+      <strong>予約のタイミング</strong>: GW金曜は当日・直前だと希望枠が埋まる恐れあり。<strong>Depot案/風車案どちらにするかは相談のうえ2027年2月頃に最終判断</strong>し、Depot案に決めたら2月中に14:15枠を確保しておくのが安全。<strong>キャンセル不可だが、72時間前まで日時変更が可能</strong>なので、決まり次第押さえて当日の進み具合で前後にずらす運用がおすすめ。<br><br>
       <strong>ガイドは2種類（いずれも入場チケットに含まれ無料）</strong><br>
       ① <strong>Walk-inプログラム</strong>: 収蔵庫コンパートメントごとに随時実施。開始時刻は入口に表示。所要約10分、最大13人。ガイドとともに収蔵庫の中に入れる。英語対応あり。<br>
       ② <strong>ガイドツアー（全体）</strong>: 入口デスクで申し込み。所要60分、最大13人。英語・オランダ語・ドイツ語・フランス語対応。空き状況によるので到着したらすぐ確認を。<br><br>
-      屋上35mに白樺75本の庭園からロッテルダムの眺望も。<strong>今回はDepotを1時間半で切り上げ、16:30頃に屋上Renildeへ上がりコーヒータイム</strong>。ディナー前の時間帯なのでカフェ利用でOK、チケットなしでもエレベーターで6階へ直行できます。夕暮れのロッテルダム眺望を楽しんでから帰路へ。
+      屋上35mに白樺75本の庭園からロッテルダムの眺望も。<strong>閉館17:00に向けてDepotを切り上げ、屋上Renilde（6F）へ</strong>。ディナー前の時間帯なのでカフェ利用でOK、有効なチケットがあれば自分の時間枠開始後はいつでも屋上へ。夕暮れのロッテルダム眺望を楽しんでから帰路へ。
     </div>
     <div class="callout" style="margin-top: 16px;">
-      <strong>デルフト1時間のコツ</strong>
-      市場広場（Markt）と新教会（Nieuwe Kerk）を中心に、運河沿いの街並みを歩くだけでフェルメールの「デルフトの眺望」の世界を体感できます。フェルメールセンターは今回省略。
+      <strong>デルフトに寄れた場合のコツ（プランA）</strong>
+      市場広場（Markt）と新教会（Nieuwe Kerk）を中心に、運河沿いの街並みを歩くだけでフェルメールの「デルフトの眺望」の世界を体感できます。フェルメールセンターは今回省略。あくまで体力が残っていればの任意立ち寄りで、無料・予約不要なので当日の気分で決めてよい。
     </div>
   </div>
 
@@ -2147,18 +2254,18 @@
     <tr><td><strong>すでに販売中</strong>（最大1年前から）</td><td><strong>KMSKA</strong>（4/28用）<br>※キャンセル不可・日時変更は可能（個人券のみ・訪問日前まで）</td><td>€20/人</td><td><a href="https://tickets.kmska.be" target="_blank">tickets.kmska.be</a></td></tr>
     <tr><td><strong>2026年10月中旬</strong></td><td><strong>キューケンホフ 5/1 チケット購入</strong>（プランBを選ぶ場合）公式サイトによると10月中旬発売開始。週末は即完売。<strong>4日前まで全額キャンセル可</strong>なので安心して押さえる</td><td>€21/人〜（コンビチケット€33〜）</td><td><a href="https://keukenhof.nl/en/" target="_blank">keukenhof.nl</a></td></tr>
     <tr><td><strong>2026年11〜12月</strong></td><td><strong>ゴッホ美術館（最優先）</strong>販売開始は約4-5ヶ月前、特に4月チューリップシーズンは早期完売リスク。販売開始日に即予約推奨</td><td>€25/人</td><td><a href="https://tickets.vangoghmuseum.com" target="_blank">tickets.vangoghmuseum.com</a></td></tr>
-    <tr><td><strong>2026年11〜12月</strong></td><td>Depot Boijmans Van Beuningen（時間帯指定）／Renilde夕食を選ぶ場合: Depot＋Renildeコンビチケット</td><td>€20/人 / コンビ€57/人</td><td><a href="https://www.boijmans.nl/en/tickets" target="_blank">boijmans.nl</a></td></tr>
+    <tr><td><strong>2027年2月頃（最終判断）</strong></td><td>Day7午後をDepot案かキンデルダイク風車案か選択。<strong>Depot案なら</strong>Depot Boijmans 14:15枠を2月中に予約（GW金曜は直前だと埋まる恐れ。キャンセル不可だが72時間前まで日時変更可）。<strong>風車案なら</strong>WaterShuttle＋キンデルダイク入場のコンビチケットを予約</td><td>Depot案: €20/人 ／ 風車案: €30〜35/人</td><td><a href="https://www.boijmans.nl/en/tickets" target="_blank">boijmans.nl</a> / <a href="https://kinderdijk.com" target="_blank">kinderdijk.com</a></td></tr>
     <tr><td><strong>2026年12月〜2027年1月</strong></td><td>聖バーフ大聖堂(神秘の子羊AR)</td><td>€16/人</td><td><a href="https://www.sintbaafskathedraal.be" target="_blank">sintbaafskathedraal.be</a></td></tr>
     <tr><td><strong>2026年12月末</strong></td><td><strong>Eurocity Direct 4/28 アントワープ中央駅→スキポール</strong>（Mid Flex推奨、B-Europe推奨）</td><td>€31/人</td><td><a href="https://www.b-europe.com" target="_blank">b-europe.com</a></td></tr>
     <tr><td><strong>2026年12月末</strong></td><td><strong>Eurocity Direct 5/1 スキポール→ブリュッセル南</strong>（Mid Flex推奨、時間変更可能で柔軟性◎）</td><td>€33/人</td><td><a href="https://www.b-europe.com" target="_blank">b-europe.com</a> または <a href="https://www.nsinternational.com/en" target="_blank">nsinternational.com</a></td></tr>
-    <tr><td><strong>✅ 予約済み</strong>（2026/5/28）</td><td><strong>Eurostar 4/26 ブリュッセル⇔パリ往復</strong>（往路07:43-09:05、復路20:22-21:44、座席確保済み）</td><td>€140（2人）</td><td>予約完了</td></tr>
+    <tr><td><strong>✅ 予約済み</strong></td><td><strong>Eurostar 4/26 ブリュッセル⇔パリ往復</strong>（往路07:43-09:05、復路20:22-21:44、座席確保済み）</td><td>Standardクラス</td><td>予約完了</td></tr>
     <tr><td><strong>2027年1月下旬</strong></td><td><strong>ルーブル美術館</strong>（3ヶ月前ローリング販売）</td><td>€32/人</td><td><a href="https://ticket.louvre.fr" target="_blank">ticket.louvre.fr</a></td></tr>
     <tr><td><strong>2027年1月下旬〜2月</strong></td><td>アムステルダム国立美術館（3ヶ月前まで販売）</td><td>€25/人</td><td><a href="https://www.rijksmuseum.nl" target="_blank">rijksmuseum.nl</a></td></tr>
     <tr><td><strong>2027年1〜2月</strong></td><td>ベルギー王立美術館＋マグリット</td><td>€20/人</td><td><a href="https://www.fine-arts-museum.be" target="_blank">fine-arts-museum.be</a></td></tr>
     <tr><td><strong>2027年1〜2月</strong></td><td>王宮温室の販売開始情報をウォッチ</td><td>-</td><td><a href="https://www.koninklijke-serres-royales.be" target="_blank">koninklijke-serres-royales.be</a></td></tr>
     <tr><td><strong>2027年3月販売開始日</strong></td><td><strong>王宮温室予約</strong>（3日で完売リスク）</td><td>€6前後</td><td>公式サイトから</td></tr>
     <tr><td><strong>2027年3月</strong></td><td><strong>オルタ博物館予約</strong>（4/25日曜16:00枠、15分ごと15人制限）</td><td>€14/人</td><td><a href="https://www.hortamuseum.be" target="_blank">hortamuseum.be</a></td></tr>
-    <tr><td><strong>2027年4月上旬</strong></td><td>マウリッツハイス（3-4週前で十分）</td><td>€19.5/人</td><td><a href="https://www.mauritshuis.nl" target="_blank">mauritshuis.nl</a></td></tr>
+    <tr><td><strong>2027年4月上旬</strong></td><td>マウリッツハイス（行く確定・3-4週前で十分、早めに押さえてもOK）</td><td>€19.5/人</td><td><a href="https://www.mauritshuis.nl" target="_blank">mauritshuis.nl</a></td></tr>
   </table>
   <div class="callout">
     <strong>詐欺サイト注意</strong>
@@ -2172,8 +2279,8 @@
   <h3 class="subsection">国際列車（要事前予約）</h3>
   <table>
     <tr><th>日付</th><th>区間</th><th>列車</th><th>予約タイミング</th><th>価格目安</th></tr>
-    <tr><td><a href="#day-426">4/26</a></td><td>Bruxelles-Midi 07:43 → Paris Nord 09:05</td><td>Eurostar Standard</td><td>✅予約済み</td><td>€35×2</td></tr>
-    <tr><td><a href="#day-426">4/26</a></td><td>Paris Nord 20:22 → Bruxelles-Midi 21:46</td><td>Eurostar Standard</td><td>同上</td><td>€35（目安）</td></tr>
+    <tr><td><a href="#day-426">4/26</a></td><td>Bruxelles-Midi 07:43 → Paris Nord 09:05</td><td>Eurostar Standard</td><td>✅予約済み</td><td>—</td></tr>
+    <tr><td><a href="#day-426">4/26</a></td><td>Paris Nord 20:22 → Bruxelles-Midi 21:46</td><td>Eurostar Standard</td><td>同上</td><td>—</td></tr>
     <tr><td><a href="#day-428">4/28</a></td><td>Antwerpen-Centraal → Schiphol Airport（→ Zaandam乗り換え）</td><td>EuroCity Direct（ECD）+ NS</td><td>Mid Flex事前購入推奨</td><td>€31/人</td></tr>
     <tr><td><a href="#day-501">5/1</a></td><td>Schiphol Airport → Bruxelles-Midi</td><td>EuroCity Direct（ECD）</td><td>Mid Flex事前購入推奨</td><td>€33/人</td></tr>
   </table>
@@ -2268,13 +2375,13 @@
   </ul>
 
   <div class="callout gold" style="margin-top:24px;">
-    <strong>✅ 予約完了（2026/5/28）</strong>
-    往路・復路ともStandard €35最安帯で確保、<strong>2人往復で€140</strong>のベストケース達成。<br><br>
+    <strong>✅ 予約完了</strong>
+    往路・復路ともStandardクラスで確保済み。<br><br>
     ・<strong>往路</strong>: 4/26（月）ブリュッセル南07:43 → パリ北09:05（1h22m）<br>
     ・<strong>復路</strong>: 4/26（月）パリ北20:22 → ブリュッセル南21:44（1h22m）<br>
     ・座席は往復ともペア席で確保済み<br><br>
-    復路20:22便の選択理由: ルーブル17:30退館後、北駅で1時間以上の夕食時間を確保できる（19:24便は最安だが18:54チェックイン期限がタイトで夕食困難）。<br><br>
-    <strong>Eurostar Standardの柔軟性</strong>: 出発1時間前まで無料で列車変更可（差額のみ）、7日前まで€25でキャンセル可。当日の体調や予定変更にも対応できる。<br><br>
+    復路20:22便の選択理由: ルーブル17:30退館後、北駅で1時間以上の夕食時間を確保できる（より早い便は最安だがチェックイン期限がタイトで夕食困難）。<br><br>
+    <strong>Eurostar Standardの柔軟性</strong>: 出発1時間前まで無料で列車変更可（差額のみ）、7日前まで所定の手数料でキャンセル可。当日の体調や予定変更にも対応できる。<br><br>
     eチケット（QRコード）はメール受信済み。<strong>当日はスマホにQRコードを表示</strong>、またはプリントアウトで対応。
   </div>
 </section>
@@ -2319,7 +2426,7 @@
     <tr><th>合計 プランA</th><th>€460.5</th><th>€921</th></tr>
     <tr><th>合計 プランB</th><th>€489</th><th>€978</th></tr>
   </table>
-  <p style="margin-top:8px; font-size:0.85rem; color:var(--grey-soft);">※1 Eurostar 4/26 €70/人（✅予約確定・往復Standard各€35）/ ECD 4/28 €31/人 / ECD 5/1 €33/人。ECDは2026年11月実勢ベース、GW繁忙期は若干の変動の可能性あり（Mid Flex事前購入で価格固定）</p>
+  <p style="margin-top:8px; font-size:0.85rem; color:var(--grey-soft);">※1 Eurostar 4/26 ブリュッセル⇔パリ往復（✅予約確定・往復Standard）/ ECD 4/28 / ECD 5/1。ECDは実勢ベースの目安で、GW繁忙期は若干の変動の可能性あり（Mid Flex事前購入で価格固定）</p>
   <p style="margin-top:12px;"><strong>プランA→Bの差額</strong>: 1人あたり€28.5、2人で<strong>€57</strong>増（キューケンホフは入場＋シャトル€33.5、ザーンセは風車1基€5なので差は€28.5）</p>
   <div class="callout gold">
     <strong>日本円換算（1€=¥185として・2026年5月現在）</strong><br>
@@ -2327,30 +2434,85 @@
     プランB: 約18.1万円（2人合計€978、入場料＋列車代）<br>
     <span style="font-size:0.85rem; color:var(--grey-soft);">※ 旅行時点のレートにより変動します。現在は円安傾向のため余裕を持って計算を。</span>
   </div>
-  <h3 class="subsection" style="margin-top: 28px;">旅費の全体像（2人合計・概算）</h3>
+  <h3 class="subsection" style="margin-top: 28px;">旅費の全体像（概算の考え方）</h3>
   <table>
-    <tr><th>項目</th><th>金額（概算）</th><th>備考</th></tr>
-    <tr><td>フライト（往復ANA）</td><td>マイル＋諸費用 約25万円</td><td>特典航空券</td></tr>
-    <tr><td>ホテル（4泊＋3泊）</td><td>約18万円</td><td>ブリュッセル4泊＋Zaandam3泊</td></tr>
-    <tr><td>入場料＋列車</td><td>約17〜18万円</td><td>プランA約17.0万／プランB約18.1万</td></tr>
-    <tr><td>飲食費（8日間）</td><td>約11〜15万円</td><td>カフェ・バル中心、本格レストランは数回</td></tr>
-    <tr><td>お土産</td><td>約2〜4万円</td><td>チョコ・デルフト焼き・美術館グッズ等</td></tr>
-    <tr><td>海外旅行保険</td><td>¥0</td><td>クレジットカード付帯でカバー</td></tr>
-    <tr><th>総額（プランA・概算）</th><th>約75〜78万円</th><th>マイル分は別</th></tr>
+    <tr><th>項目</th><th>考え方</th></tr>
+    <tr><td>フライト（往復ANA）</td><td>特典航空券（マイル＋諸費用）で手配</td></tr>
+    <tr><td>ホテル（4泊＋3泊）</td><td>ブリュッセル4泊＋Zaandam3泊</td></tr>
+    <tr><td>入場料＋列車</td><td>上記の入場料・列車代を参照</td></tr>
+    <tr><td>飲食費（8日間）</td><td>カフェ・バル中心、本格レストランは数回</td></tr>
+    <tr><td>お土産</td><td>チョコ・デルフト焼き・美術館グッズ等</td></tr>
+    <tr><td>海外旅行保険</td><td>クレジットカード付帯でカバー</td></tr>
   </table>
-  <p style="margin-top:8px; font-size:0.85rem; color:var(--grey-soft);">※ €換算は1€=¥185。フライトのマイル分を除いた現金支出の概算。飲食費は前回スペイン旅行実績（1日2人€60-80、バル中心）にベルギー物価倍率1.3（中級レストランで約1.6倍だが、カフェ・バル比率を高くした想定）を適用して試算。為替・実際の食事内容により変動。</p>
+  <p style="margin-top:8px; font-size:0.85rem; color:var(--grey-soft);">※ 入場料・列車代は各施設・各社の公開価格を積み上げたもの。飲食費は前回スペイン旅行実績にベルギー物価倍率（カフェ・バル比率を高くした想定）を適用して試算。為替・実際の食事内容により変動。</p>
 
   <div class="callout sage" style="margin-top: 24px;">
-    <strong>🏥 海外旅行保険はクレジットカード付帯で対応（3枚体制）</strong>
-    保有する3枚のクレジットカード付帯保険でカバー（1枚は自動付帯、2枚は利用付帯）。<strong>利用付帯の2枚はいずれも「現地での公共交通決済」で有効化できる</strong>ことを約款で確認済み。空港→中央駅の鉄道、現地のトラム等を夫婦それぞれ別カードで決済し、全カードの補償を有効化する作戦。<br><br>
-    複数カードの<strong>治療費・救援者費用は合算可能</strong>なため、3枚合算で<strong>疾病・傷害とも手厚い治療費補償＋救援者費用</strong>を確保。60代の旅として十分すぎる備えとなり、追加の上乗せ保険は不要レベル。カード会社の<strong>24時間日本語メディカルヘルプライン</strong>（ベルギー・オランダ・フランスの現地番号あり）でキャッシュレス治療の手配も可能。<br><br>
-    <span style="font-size:0.85rem; color:var(--grey-soft);">※ 有効化には「都度の切符・乗車券」をカード決済すること（プリペイド・回数券・定期券は対象外）。保険のしおり（冊子）は現地に持参し、有効化決済の明細も残しておくと請求時スムーズ。</span>
+    <strong>🏥 海外旅行保険はクレジットカード付帯で対応</strong>
+    保有するクレジットカードの付帯保険でカバーする方針。利用付帯のカードは「現地での公共交通決済」で有効化できるか約款を事前確認しておくのがコツ（空港→中央駅の鉄道、現地のトラム等を都度カード決済して補償を有効化）。<br><br>
+    複数カードを併用する場合、<strong>治療費・救援者費用は合算できる</strong>のが一般的なので、組み合わせで手厚い補償を確保できる。カード会社の<strong>24時間日本語メディカルヘルプライン</strong>（各国の現地番号）でキャッシュレス治療の手配も可能。<br><br>
+    <span style="font-size:0.85rem; color:var(--grey-soft);">※ 利用付帯の有効化には「都度の切符・乗車券」をカード決済すること（プリペイド・回数券・定期券は対象外なのが一般的）。保険のしおり（冊子）は現地に持参し、有効化決済の明細も残しておくと請求時スムーズ。</span>
   </div>
 </section>
 
 <!-- IX. 食事スポット -->
+<!-- X. 食をめぐる物語（コラム） -->
+<section id="food-column">
+  <h2 class="section-title"><span class="num">X</span>食をめぐる物語</h2>
+
+  <p class="column-lede">フランドルの食卓は、絵画と同じように歴史を映す。香辛料貿易で栄えた港町の記憶、修道院の醸造室で守られた酵母、新大陸から渡ってきたジャガイモ——一皿のなかに、北方ヨーロッパの五百年が折りたたまれている。美術館を巡るあいだの食事を、ただの腹ごしらえではなく「もう一つの展示室」として味わうための、短い読み物を六つ。</p>
+
+  <div class="column-body">
+
+  <h3 class="subsection">🍟 フリットは「ベルギーの国民食」になった</h3>
+  <p>ベルギー人にとってフリット（frites）はフランス料理の付け合わせではなく、それ自体が誇りであり、アイデンティティそのものだ。「フレンチ・フライ」という英語名に、ベルギー人は今も静かに憤慨している。発祥にはいくつもの説があるが、有力なのは17〜18世紀、ムーズ川流域の住民が冬に川が凍って小魚が獲れなくなると、代わりにジャガイモを魚の形に切って揚げたという物語だ。第一次世界大戦中、この地に駐留したアメリカ兵が現地のフランス語を聞いて「フレンチ」と呼んだ——という誤解の起源説も、真偽はともかくよく語られる。</p>
+  <p>本物のベルギー・フリットは<strong>二度揚げ</strong>が鉄則。一度低温で火を通し、休ませてから高温でカリッと仕上げる。伝統的には牛脂(blanc de bœuf)で揚げるため、独特のコクが出る。街角の<strong>フリットコット(friterie／frietkot)</strong>——プレハブの屋台小屋——は2014年にフランデレン政府が「文化遺産」として保護対象に挙げたほどで、ベルギー全土に約5,000軒あるとされる。紙コーンに山盛りにして、マヨネーズや無数のソースから一つを選ぶ。ケチャップはむしろ少数派だ。</p>
+  <div class="callout gold">
+    <strong>旅程での一杯</strong>
+    ブリュッセルなら老舗 <strong>Maison Antoine</strong>(Place Jourdan)が観光客にも地元民にも愛される定番。グランプラス周辺で手早くなら、夕方の街歩きの締めに紙コーン片手というのが王道。美術館帰りの小腹にちょうどよい。
+  </div>
+
+  <h3 class="subsection">🍺 修道院ビールという「祈りと醸造」の伝統</h3>
+  <p>ベルギーのビール文化は、ヨーロッパでも突出して豊穣だ。その核にあるのが<strong>トラピスト・ビール</strong>——トラピスト会(厳律シトー会)の修道院で、修道士自身の監督のもと醸造されるビールである。世界に十数ある認定醸造所のうち、ベルギーには Westvleteren、Chimay、Orval、Rochefort、Westmalle、Achel といった名が揃う。とりわけ Westvleteren 12 は「世界最高のビール」としばしば評され、修道院に電話予約して車で買いに行くしかない入手困難さで知られる。</p>
+  <p>修道院がビールを造るのには歴史的な理由がある。中世、水よりも煮沸された低アルコール飲料のほうが安全だった時代、ビールは栄養源であり、四旬節の断食期間中の「液体のパン」でもあった。そして醸造は修道院の自給自足と慈善活動の資金源だった。今もトラピスト製品の収益は、修道院の維持と慈善以外に使ってはならないという厳格な規定がある。<strong>飲むことが、そのまま中世以来の経済と信仰の仕組みに触れること</strong>になるのは、美術館で宗教画を見る体験とどこか通じている。</p>
+  <p>トラピスト以外にも、ベルギーには修道院のレシピを継ぐ<strong>アベイ(Abbey)ビール</strong>、ブリュッセル近郊のゼンヌ川流域でしか生まれない野生酵母の自然発酵ビール<strong>ランビック</strong>、それを熟成・ブレンドした<strong>グーズ</strong>、サクランボを漬けた<strong>クリーク</strong>など、一つの国とは思えない多様性がある。2016年には「ベルギーのビール文化」がユネスコ無形文化遺産に登録された。</p>
+  <p class="pull-quote">一杯のグラスの底に、ゼンヌ川の空気と五世紀の時間が沈んでいる</p>
+
+  <h3 class="subsection">🍫 チョコレートと「プラリネ」の発明</h3>
+  <p>ベルギーが世界のチョコレート地図で別格の位置を占めるようになったのは、19世紀から20世紀初頭にかけてのことだ。決定的だったのは1912年、ブリュッセルの<strong>ジャン・ノイハウス2世</strong>による<strong>プラリネ(praline)</strong>——固いチョコレートの殻の中に柔らかいフィリングを詰めた一口菓子——の発明である。それまで薬局で売られていた苦い薬用チョコレートを、彼は贅沢な嗜好品へと変えた。妻のために考案された包装箱<strong>バロタン(ballotin)</strong>が、贈り物としてのチョコレートという文化を決定づけた。</p>
+  <p>ベルギーがカカオに恵まれたのは、ある意味で帝国主義の影でもある。コンゴを植民地として支配した時代、原料供給と精製技術が国内に蓄積された。今日ブリュッセルの目抜き通りに並ぶ Neuhaus、Godiva、Leonidas、Pierre Marcolini といったブランドは、その歴史の上に立つ。<strong>美術館の収蔵品が植民地経済や交易の産物であるのと同じ構図</strong>が、ショーウィンドウの中にもある——そう思って眺めると、一粒のプラリネの見え方も少し変わる。</p>
+  <div class="callout sage">
+    <strong>味わいのコツ</strong>
+    高級店の量り売りでは、3〜5粒だけ選んで「今ここで」食べるのが贅沢な楽しみ方。ばらまき土産はスーパーで、本物の体験は専門店で、と割り切ると満足度が高い(→ お土産戦略の章も参照)。
+  </div>
+
+  <h3 class="subsection">🦪 海と運河の幸 — ムール貝と北海の魚</h3>
+  <p>ベルギーの古典料理といえば<strong>ムール・フリット(moules-frites)</strong>。バケツのような鍋で蒸したムール貝に、当然フリットが添えられる。意外なことにムール貝の多くはオランダのゼーラント産で、両国の食はこうした海産物を通じても結ばれている。旬は伝統的に「Rの付く月」(9月〜4月)とされ、ちょうど春の終わりの旅程は季節の変わり目にあたる。</p>
+  <p>オランダ側に渡れば、屋台文化の主役は<strong>ハーリング(haring／塩漬けニシン)</strong>だ。新鮮な生ニシンを軽く塩漬けにし、刻んだ玉ねぎと共に、尾を持って上を向いて一気に食べる——というのがアムステルダム式の作法。初夏に出回る脂ののった<strong>ホーランセ・ニーウェ(Hollandse Nieuwe)</strong>は国民的なご馳走で、その年の初物の価格がニュースになるほどだ。17世紀オランダ黄金時代の繁栄を支えたのが、まさにこのニシン漁とその塩漬け保存技術だった。<strong>レンブラントやフェルメールの時代の経済を、屋台の一匹が今に伝えている</strong>。</p>
+
+  <h3 class="subsection">🧀 オランダのチーズと「市」の風景</h3>
+  <p>オランダはチーズ輸出で世界有数の国であり、<strong>ゴーダ</strong>と<strong>エダム</strong>という二つの地名が、そのまま世界共通のチーズの名になっている。ゴーダはオランダのチーズ生産量の過半を占め、熟成期間によって若い(jong)ものから濃厚な(oud)ものまで表情を変える。よく熟成したゴーダに現れる、ジャリッとした旨味の結晶(チロシン)は、長い時間の贈り物だ。</p>
+  <p>かつてチーズは農村の重要な現金収入源であり、各地に<strong>チーズ市(kaasmarkt)</strong>が立った。アルクマールやハウダ(ゴーダ)の市では、白装束の運び手が独特の担架でチーズを運び、手を打ち合わせて値を決める伝統的な競りが、今も観光行事として続く。フェルメールの故郷デルフトの市場広場(Markt)も、そうした交易と市の文化が息づいた場所だった。<strong>静物画に描かれたチーズやパン、銀器</strong>は、こうした豊かな商業都市の食卓の記録でもある。</p>
+  <div class="callout gold">
+    <strong>旅程での一口</strong>
+    ザーンセ・スカンス(5/1朝)にはチーズ工房 De Catharina Hoeve があり、試食しながら熟成違いを食べ比べできる。土産にするなら個包装の熟成ゴーダが扱いやすい。スーパー(Albert Heijn)でも質の高いものが手頃に手に入る。
+  </div>
+
+  <h3 class="subsection">🥞 甘いものたち — ワッフル、スペキュロス、ストロープワッフル</h3>
+  <p>ベルギーの<strong>ワッフル</strong>には大きく二系統ある。四角く軽い<strong>ブリュッセル・ワッフル</strong>は、サクッとした生地に粉砂糖を振るのが伝統で、本来は屋台の歩き食べ。一方、リエージュ発祥の<strong>リエージュ・ワッフル</strong>は、生地に真珠糖(pearl sugar)を練り込んでキャラメリゼさせた、丸く重い菓子だ。観光地で見かける生クリームやフルーツ山盛りのワッフルは、実は近年の観光客向けの演出という側面もある。</p>
+  <p><strong>スペキュロス(speculoos)</strong>は、シナモンを利かせた薄く香ばしいビスケット。聖ニコラスの祝日(12月6日)に結びついた伝統菓子で、今ではコーヒーに添える定番として一年中親しまれ、ペースト状にした「スペキュロス・スプレッド」も人気だ。オランダに渡れば、二枚の薄い生地のあいだにキャラメルシロップを挟んだ<strong>ストロープワッフル(stroopwafel)</strong>が待っている。発祥は18世紀末のハウダ(ゴーダ)。温かい飲み物のカップの上にしばらく載せ、湯気でシロップを少し溶かしてから食べるのが地元流の作法だ。</p>
+  <p class="pull-quote">菓子は祝祭の記憶を運ぶ。一枚のビスケットの香りに、聖人の日と冬の市が宿る</p>
+
+  </div>
+
+  <div class="callout sage" style="margin-top: 36px;">
+    <strong>食を旅の縦糸に</strong>
+    実際にどの街でどの店に入るかは、次章「食事スポット」に具体的な候補をまとめてあります。このコラムは、その一皿の背景にある物語として読んでいただければ。美術館で絵を見るのと同じ目で食卓を眺めると、旅はもう一段深くなります。
+  </div>
+</section>
+
+<!-- XI. 食事スポット -->
 <section id="dining">
-  <h2 class="section-title"><span class="num">X</span>食事スポット</h2>
+  <h2 class="section-title"><span class="num">XI</span>食事スポット</h2>
   <div class="callout">
     <strong>食事戦略</strong>
     シェア前提・ランチは軽め・ディナーは雰囲気重視・朝食はホテルで適当に・地元民が普段使う店優先。各場所に2〜3候補を用意して混雑時に備える。
@@ -3014,7 +3176,7 @@
 
 <!-- X. お土産戦略 -->
 <section id="souvenirs">
-  <h2 class="section-title"><span class="num">XI</span>お土産戦略</h2>
+  <h2 class="section-title"><span class="num">XII</span>お土産戦略</h2>
 
   <h3 class="subsection">🛒 ばらまき土産はスーパーで</h3>
   <p style="margin-bottom: 16px;">スペインのメルカドーナのように、地元民御用達のスーパーでベルギー・オランダの食品土産をまとめ買いするのが賢い選択。高級チョコレートは空港や専門店で、ばらまき用はスーパーで使い分けを。</p>
@@ -3064,7 +3226,7 @@
 
 <!-- XI. 重要な注意事項 -->
 <section id="notes">
-  <h2 class="section-title"><span class="num">XII</span>重要な注意事項</h2>
+  <h2 class="section-title"><span class="num">XIII</span>重要な注意事項</h2>
   <h3 class="subsection">5/1メーデー対策</h3>
   <ul>
     <li><strong>ベルギー側は5/1が祝日</strong>、列車ダイヤが祝日ダイヤに</li>
@@ -3120,7 +3282,7 @@
 
 <!-- XII. チェックリスト -->
 <section id="checklist">
-  <h2 class="section-title"><span class="num">XIII</span>出発前チェックリスト</h2>
+  <h2 class="section-title"><span class="num">XIV</span>出発前チェックリスト</h2>
   <div class="callout sage" style="margin-bottom: 20px;">
     <strong>📅 月1回チェック推奨</strong>
     各美術館・列車の販売開始時期は変動の可能性あり。<strong>月1回程度、関係する公式サイトで販売状況を確認</strong>するのが安全。下記は2026年5月時点の各館仕様に基づく目安。
@@ -3136,7 +3298,7 @@
       <li><strong>2026年12月〜2027年1月</strong>: 聖バーフ大聖堂予約</li>
       <li><strong>2026年12月末</strong>: Eurocity Direct 4/28 アントワープ中央駅→スキポール予約（b-europe.com、Mid Flex推奨）</li>
       <li><strong>2026年12月末</strong>: Eurocity Direct 5/1 スキポール→ブリュッセル南予約（b-europe.com または nsinternational.com、Mid Flex推奨）</li>
-      <li>✅ <s>2026年秋〜2027年初頭: Eurostar 4/26 ブリュッセル⇔パリ往復予約</s> <strong>完了（2026/5/28・€140・往復とも€35最安帯で確保）</strong></li>
+      <li>✅ <s>2026年秋〜2027年初頭: Eurostar 4/26 ブリュッセル⇔パリ往復予約</s> <strong>完了（往復ともStandardクラスで確保）</strong></li>
     </ul>
   </div>
   <h3 class="subsection">2027年</h3>

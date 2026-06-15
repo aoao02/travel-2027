@@ -826,6 +826,45 @@
     .lightbox-close { top: 16px; right: 20px; font-size: 2rem; }
     .lightbox-hint { display: none; }
   }
+  /* 章ナビ（章頭の前後移動） */
+  .chapter-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 28px 0;
+    padding-bottom: 18px;
+    border-bottom: 1px dotted var(--line);
+    font-family: 'Cormorant Garamond', 'Shippori Mincho', serif;
+  }
+  .chapter-nav a, .chapter-nav span.disabled {
+    flex: 1;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    color: var(--gold-deep);
+    background: var(--paper-warm);
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .chapter-nav a.prev { text-align: left; }
+  .chapter-nav a.index, .chapter-nav span.index { text-align: center; flex: 0 0 auto; }
+  .chapter-nav a.next { text-align: right; }
+  .chapter-nav a:hover {
+    background: var(--gold-deep);
+    color: var(--paper-warm);
+  }
+  .chapter-nav span.disabled {
+    visibility: hidden;
+  }
+  @media (max-width: 480px) {
+    .chapter-nav a, .chapter-nav span.disabled { font-size: 0.72rem; padding: 6px 6px; }
+  }
 </style>
 </head>
 <body>
@@ -845,7 +884,7 @@
 </header>
 
 <!-- 目次 -->
-<nav class="toc">
+<nav class="toc" id="toc">
   <h3>Index — 目次</h3>
   <ul>
     <li><a href="#essentials">I. 基本情報・フライト</a></li>
@@ -3439,6 +3478,71 @@
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
     }
+  });
+})();
+</script>
+
+<script>
+(function() {
+  // 章頭ナビ自動生成: 各 section（section-title を持つもの）の見出し直下に前/目次/次を挿入
+  const sections = Array.from(document.querySelectorAll('section'))
+    .filter(s => s.id && s.querySelector('h2.section-title'));
+
+  sections.forEach((sec, i) => {
+    const heading = sec.querySelector('h2.section-title');
+    const num = heading.querySelector('.num') ? heading.querySelector('.num').textContent.trim() : '';
+    const titleText = heading.textContent.replace(num, '').trim();
+
+    const prev = sections[i - 1];
+    const next = sections[i + 1];
+
+    const nav = document.createElement('div');
+    nav.className = 'chapter-nav';
+
+    function chapterLabel(s) {
+      const h = s.querySelector('h2.section-title');
+      const n = h.querySelector('.num') ? h.querySelector('.num').textContent.trim() : '';
+      const t = h.textContent.replace(n, '').trim();
+      return (n ? n + '. ' : '') + t;
+    }
+
+    // 前章
+    if (prev) {
+      const a = document.createElement('a');
+      a.className = 'prev';
+      a.href = '#' + prev.id;
+      a.textContent = '← ' + chapterLabel(prev);
+      nav.appendChild(a);
+    } else {
+      const sp = document.createElement('span');
+      sp.className = 'prev disabled';
+      sp.textContent = '←';
+      nav.appendChild(sp);
+    }
+
+    // 目次
+    const idx = document.createElement('a');
+    idx.className = 'index';
+    idx.href = '#toc';
+    idx.textContent = '目次';
+    nav.appendChild(idx);
+
+    // 次章
+    if (next) {
+      const a = document.createElement('a');
+      a.className = 'next';
+      a.href = '#' + next.id;
+      a.textContent = chapterLabel(next) + ' →';
+      nav.appendChild(a);
+    } else {
+      const sp = document.createElement('span');
+      sp.className = 'next disabled';
+      sp.textContent = '→';
+      nav.appendChild(sp);
+    }
+
+    // 見出しの直後に挿入
+    heading.insertAdjacentElement('afterend', nav);
   });
 })();
 </script>
